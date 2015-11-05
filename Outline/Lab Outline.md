@@ -15,9 +15,11 @@ From the manual:
 
 I propose that the optional part be spent on measuring the heating rate of the sample, as it brings together the temperature and magnetism aspect of the experiment. Still two weeks to think about, though. No worries.
 
-## Theory behind the Hall effect
+## Theory behind the Hall effect (by Tuesday November 10, in the morning)
 
 - See `References` for a nice [Youtube tutorial](https://www.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DfZoFnKo-bwk&h=8AQGIPO_0) (thanks Nico!)
+
+I suggest that **Nico** does this since he's already gone through a review of the theory like a pro.
 
 ### What we should get
 
@@ -32,16 +34,16 @@ Each item in the list is for what I think should be one block for an equation in
 
 1. $ R = \frac{\rho L}{S} $ where $R$ is the *electrical resistance* for a material of length *L*, cross sectional area *S* and *resistivity* $\rho$. $\rho$ is dependant on temperature for a given material.
 2. $\rho = \sigma^{-1}$ and $\vec{J}=\sigma\vec{E}$, where $\sigma$ is the conductivity, $\vec{J}$ is the vectorial current density and $\vec{E}$ is the electric field. For electrons (negative charge carriers) we have $\vec{J}=e^-n\vec{v}$ where $\vec{v}$ is the mean velocity of electrons and $n$ their density in the material.
-3. 
+3. $\rho(T) = a\cdot T^b$ and $R = \frac{\rho L}{S}$. Because we always use the same sample, $L/S$ is constant. Hence $$ R = a'\cdot T^b,\; a'=\frac{aL}{S}.$$ We don't need to measure the resistivity, and we can have a **way** smaller uncertainty! (repeated later, in the section on resistance against temperature)
 
-## Apparatus
+## Apparatus (by Tuesday November 10, in the morning)
 
 ### What we should get
 
-- A list and description of the equipment
+- A list and description of the equipment **David?**
 - A schematic of the experimental setup **Émile**
 - A diagram of how the information is processed (not just *computer*) **Émile**
-- Precisions on which steps are delicate for specific things
+- Precisions on which steps are delicate for specific things **Émile**
 
 ### Constant Current Power Supply
 
@@ -91,7 +93,7 @@ We'll also need a diagram like Fig. 4 from the manual for the sample holder.
 - Make sure cooling water is running when using the magnet
 - Make sure the cold-junction compensator is switched **on** when used and **off** when unused
 
-## Measurement of the sample's relevant dimensions
+## Measurement of the sample's relevant dimensions (by the end of Tuesday November 9's lab session)
 
 ### What we should get
 
@@ -102,21 +104,39 @@ We'll also need a diagram like Fig. 4 from the manual for the sample holder.
 
 Apparently, we will **not** be measuring the sample ourselves, instead using pictures taken by Dominic or Mark. The sample is too fragile to be manipulated by our impure hands ;P We also **don't** need the dimensions for most of the experiment. To paraphrase Dominic: the dimensions of the sample are only useful to get the resistivity, carrier density or charge. We rarely need those, so whenever we can, we should use the **resistance** instead of the resistivity, to reduce our uncertainties in the other sections of the experiment. I'll check, but this may mean that we can **completely scrap this part of the experiment**.
 
-## ~~Resistivity~~ _Resistance_ as a function of temperature
+## ~~Resistivity~~ _Resistance_ as a function of temperature (start on Tuesday November 9)
+
+### What we should get out
+
+- A graph
+- A fit, with uncertainties and chi-square 
+
+### Not having to use the resistivity
+
+From the manual: $\rho(T) = a\cdot T^b$ and $R = \frac{\rho L}{S}$. Because we always use the same sample, $L/S$ is constant. Hence $$ R = a'\cdot T^b,\; a'=\frac{aL}{S}.$$ We don't need to measure the resistivity, and we can have a **way** smaller uncertainty!
+
+### Fitting the data
+
+We should get a graph with two distinct parts; a power part, and an exponential part. We'll fit the first part using $R = a'\cdot T^b$, and verify that $b\approx3/2$, and the second part using $R=a'\exp\frac{b}{T}$ to find the band gap energy $E_g$ with Eq. 6 from the manual, $\sigma\propto\exp\frac{E_g}{2k_BT}.$ Again, because $\sigma=1/\rho$, we can use $R$ as a proxy and reduce our uncertainty since then $R^{-1}\propto\sigma$ and this does not influence $E_g$ in the parameters. 
+
+## Hall coefficient as a function of temperature (start on Thursday November 11, use for interim report)
 
 ### What we should get out
 
 - A graph
 - A fit, with uncertainties and chi-square
 
-## Hall coefficient as a function of temperature
+## Interim report (due Tuesday November 19)
 
-### What we should get out
+We need to have:
 
-- A graph
-- A fit, with uncertainties and chi-square
+- A function of the resistance against temperature
+- A function for the Hall coefficient against temperature
+- An explanation of how we managed our uncertainties
 
-## Magneto-resistance against magnetic field intensity
+Ideally, *all* of the interim report can be used for the final report.
+
+## Magneto-resistance against magnetic field intensity (start Thursday November 21)
 
 ### What we should get out
 
