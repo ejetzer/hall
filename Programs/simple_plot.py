@@ -5,9 +5,10 @@ import spinmob, glob, sys, matplotlib.pylab as pylab
 
 def simple_plot(data_file):
     databox = spinmob.data.load(data_file)
-    spinmob.plot.xy.databoxes([databox], 'd[0]', 'd[1]*d[3]', 'd[2]')
-    pylab.savefig(data_file.split('/')[-1] + '.png')
-    pylab.savefig(data_file.split('/')[-1] + '.pdf')
+    xs, ys, es = databox[0], databox[1], databox[2]
+    spinmob.plot.xy.data(xs, ys, es)
+    pylab.savefig('../Graphs/Simple plots/' + data_file.split('/')[-1] + '.png')
+    pylab.savefig('../Graphs/Simple plots/' + data_file.split('/')[-1] + '.pdf')
     pylab.clf()
 
 if __name__ == '__main__':
