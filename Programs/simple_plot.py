@@ -6,7 +6,8 @@ import spinmob, glob, sys, matplotlib.pylab as pylab
 def simple_plot(data_file):
     databox = spinmob.data.load(data_file)
     xs, ys, es = databox[0], databox[1], databox[2]
-    spinmob.plot.xy.data(xs, -ys, es)
+    databox[1] = abs(ys)
+    spinmob.plot.xy.data(xs, abs(ys), es)
     pylab.savefig('../Graphs/Simple plots/' + data_file.split('/')[-1] + '.png')
     pylab.savefig('../Graphs/Simple plots/' + data_file.split('/')[-1] + '.pdf')
     pylab.clf()

@@ -13,8 +13,8 @@ def fit_exp(Ts, Rs, Rerr, eguess):
     fitter = spinmob.data.fitter(model, ps)
     fitter.set_data(Ts, Rs, Rerr)
     fitter.set(a=a, b=b) # Set guesses
-    fitter.set(xlabel='Temperature',
-               ylabel='Resistance')
+    fitter.set(xlabel='Temperature (K)',
+               ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
     pylab.savefig('../Graphs/RvsT/fit_exp.png')
@@ -30,8 +30,8 @@ def fit_power(Ts, Rs, Rerr, pguess):
     fitter = spinmob.data.fitter(model, ps)
     fitter.set_data(Ts, Rs, Rerr)
     fitter.set(a=a, x0=x0) # Set guesses
-    fitter.set(xlabel='Temperature',
-               ylabel='Resistance')
+    fitter.set(xlabel='Temperature (K)',
+               ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
     pylab.savefig('../Graphs/RvsT/fit_power.png')
@@ -41,31 +41,32 @@ def fit_power(Ts, Rs, Rerr, pguess):
 def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     ## Split the data in two parts
     x1, x2, y1, y2, e1, e2 = [], [], [], [], [], []
-    for T, R, e in zip(Ts, Rs, es):
+    for T, R, pe, ee in zip(Ts, Rs, es[0], es[1]):
         if a < T < b:
             x1.append(T)
             y1.append(abs(R))
-            e1.append(e)
+            e1.append(pe)
         elif c < T < d:
             x2.append(T)
             y2.append(abs(R))
-            e2.append(e)
+            e2.append(ee)
     ## Fit one part with the exponential
     fit1 = fit_power(x1, y1, e1, pguess)
     ## Fit one part with the polynomial
     fit2 = fit_exp(x2, y2, e2, eguess)
     return fit1, fit2
 
-def main(data_file, a, b, c, d, pguess, eguess):
+def main(data_file, a, b, c, d, pguess, eguess, perr=1, eerr=1):
     databox = spinmob.data.load(data_file)
-    xs, ys, es = databox[0], databox[1], databox[2]
+    xs, ys, es, Ns = databox[:4]
+    pes, ees = perr / pylab.sqrt(Ns), eerr / pylab.sqrt(Ns)
     if 'current' in databox.hkeys:
         current = databox.h('current')
     else:
-        current = 1 # mA
+        current = 0.1 # A
         databox.h(current=current)
     Rs = ys / current
-    Rerrs = es / current
+    Rerrs = pes / current, ees / current
     fits = splitfit(xs, Rs, Rerrs, a, b, c, d, pguess, eguess)
     return fits
 
