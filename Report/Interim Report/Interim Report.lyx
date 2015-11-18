@@ -143,7 +143,45 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-The
+For a given material of length L and crossectional area S, with electrical
+ resistance R the resistivity is defined as: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho=\frac{R\times S}{L}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\rho$
+\end_inset
+
+ is a temperature-dependent material proprety with units of 
+\begin_inset Formula $\Omega.m$
+\end_inset
+
+.
+ The inverse of the resistivity is called the conductivity of the material
+ and is also defined in electromagnetism 
+\begin_inset Formula $\sigma=\frac{1}{\rho}=\frac{\textbf{J}}{\text{\textbf{E}}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\textbf{J}$
+\end_inset
+
+ and 
+\begin_inset Formula $\textbf{E}$
+\end_inset
+
+ are the vectorial current density and electrical field.
+ 
 \end_layout
 
 \begin_layout Standard
