@@ -149,9 +149,9 @@ For a given material of length L and crossectional area S, with electrical
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\rho=\frac{R\times S}{L}
-\]
+\begin{equation}
+\rho=\frac{R\times S}{L}\label{1}
+\end{equation}
 
 \end_inset
 
@@ -181,13 +181,87 @@ For a given material of length L and crossectional area S, with electrical
 \end_inset
 
  are the vectorial current density and electrical field.
+ For negative charge carriers with density 
+\begin_inset Formula $n$
+\end_inset
+
+ and charge e for each charge, the current density related to the mean velocity
  
+\begin_inset Formula $\textbf{v}$
+\end_inset
+
+ of the charge carriers by: 
+\begin_inset Formula $\textbf{J}=en\textbf{v}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-hall effect is the effect that we observe when we add a magnetic field to
- a sample while current it driven through it.
- The magnetic field induce a force that will tend to move up positive charg
+For semiconductors the mean velocity is approximated to be: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\textbf{v}\approx\frac{e\lambda\textbf{E}}{2\sqrt{3kT\times m}},\label{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the mean free path of the carriers, k is he Boltzmann constant, T is
+ the temperature of the sample and m is the effective carrier mass.
+ Using these equations and the fact that 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ goes like 
+\begin_inset Formula $\nicefrac{1}{kT}$
+\end_inset
+
+ we find that the resistivity
+\begin_inset Formula $\rho$
+\end_inset
+
+ is related to the temperature T.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho(T)\propto T^{\nicefrac{3}{2}}\label{3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "3"
+
+\end_inset
+
+ is valid only if the number of carriers remains constant.
+ Indeed, because of quantum mechanics, we know that the electrons in the
+ semiconductor have different level of energy accessible.
+ In the specific case of semiconductors we can even talk about energy bands
+ : The Conduction Band and the Valence Band.
+ For insulators electrons are in the Valence Band, the energy gap between
+ Conduction and Valence Band is pretty large that leave no possibility for
+ electrons to move around but for semiconductors the energy bandgap is much
+ smaller and the 
 \end_layout
 
 \begin_layout Standard
@@ -204,34 +278,6 @@ Function of resistance against temperature
 \begin_layout Standard
 Here's another section for you.
  Enjoy!
-\end_layout
-
-\begin_layout Section
-Function of the Hall coefficient agains temperature
-\end_layout
-
-\begin_layout Standard
-AAAAAAAAAAAAAAAAA
-\end_layout
-
-\begin_layout Standard
-AAAAAAAAAAAAAAAAAA
-\end_layout
-
-\begin_layout Standard
-A
-\end_layout
-
-\begin_layout Section
-Uncertainty management
-\end_layout
-
-\begin_layout Standard
-AAAAAAAAAAAAAAAA
-\end_layout
-
-\begin_layout Standard
-AAAAAAAAAAA
 \end_layout
 
 \begin_layout Standard
