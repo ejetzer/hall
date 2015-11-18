@@ -17,6 +17,7 @@ def fit_exp(Ts, Rs, Rerr, eguess):
                ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
+    spinmob.tweaks.ubertidy(keep_axis_labels=True)
     pylab.savefig('../Graphs/RvsT/fit_exp.png')
     pylab.savefig('../Graphs/RvsT/fit_exp.pdf')
     return fitter
@@ -34,6 +35,7 @@ def fit_power(Ts, Rs, Rerr, pguess):
                ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
+    spinmob.tweaks.ubertidy(keep_axis_labels=True)
     pylab.savefig('../Graphs/RvsT/fit_power.png')
     pylab.savefig('../Graphs/RvsT/fit_power.pdf')
     return fitter
