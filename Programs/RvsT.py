@@ -14,6 +14,7 @@ def fit_exp(Ts, Rs, Rerr):
     fitter.set(a=a, b=b, x0=x0) # Set guesses
     # Fit.
     fitter.fit()
+    spinmob.tweaks.ubertidy(keep_axis_labels=True)
     pylab.savefig('../Graphs/RvsT/fit_exp.png')
     pylab.savefig('../Graphs/RvsT/fit_exp.pdf')
     return fitter
@@ -29,6 +30,7 @@ def fit_power(Ts, Rs, Rerr):
     fitter.set(a=a, x0=x0) # Set guesses
     # Fit.
     fitter.fit()
+    spinmob.tweaks.ubertidy(keep_axis_labels=True)
     pylab.savefig('../Graphs/RvsT/fit_power.png')
     pylab.savefig('../Graphs/RvsT/fit_power.pdf')
     return fitter

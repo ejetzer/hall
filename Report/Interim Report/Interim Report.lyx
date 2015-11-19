@@ -219,11 +219,6 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-<<<<<<< HEAD:Report/Interim Report.lyx~
-AAAAAAAAAAAAAAAAAAAAAAAAAAARutherford gold foil experiment lead to some
- very important discoveries such as the current atom model.
- The experiment Rutherford performed was to 
-=======
 The resistance of semiconductors like germanium is dependant on temperature.
  For negative charge carriers with density 
 \begin_inset Formula $n$
@@ -340,6 +335,9 @@ reference "3"
  In semiconductors, the energy band gap is much smaller and the majority
  of the electrons will be in the valence band but some will reach the conduction
  band and be charge carriers.
+ At higher temperatures, we reach the limit where the carrier density varies
+ with temperature.
+ In this case the conductivity follows Maxwell distribution with an exponential.
  This experiment is a step towards measuring the band gap of germanium.
 \end_layout
 
@@ -348,7 +346,6 @@ reference "3"
 \end_inset
 
 
->>>>>>> 00d48825560395faf7466472ab8885b08cd7a8b7:Report/Interim Report/Interim Report.lyx~
 \end_layout
 
 \begin_layout Section
@@ -853,8 +850,6 @@ chi^2$
 \end_layout
 
 \begin_layout Standard
-<<<<<<< HEAD:Report/Interim Report.lyx~
-=======
 \begin_inset Float figure
 wide false
 sideways false
@@ -997,7 +992,6 @@ name "fig:fits"
 \end_layout
 
 \begin_layout Standard
->>>>>>> 00d48825560395faf7466472ab8885b08cd7a8b7:Report/Interim Report/Interim Report.lyx~
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "MyBibliography"
