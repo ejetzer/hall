@@ -143,116 +143,9 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-The hall effect is the effect that we observe when we add a magnetic field
- to a sample while current it driven through it.
- The magnetic field induce a force that will tend to move up positive charges
- and pull down negative charges.
- The separation of charges (
-\color red
-pilled up at the suface? 
-\color inherit
-) in the conductor will create a electric field and potential.
- The resulting potential difference is calld the Hall voltage 
-\begin_inset Formula $V_{H}$
-\end_inset
-
-.
- The Hall effect can be quantify by various parameters.
- The Hall coefficient 
-\begin_inset Formula $R_{H}$
-\end_inset
-
- defined as 
-\begin_inset Formula $R_{H}=\frac{E_{y}}{J_{x}B}=\frac{V_{H}d}{IB}=\frac{1}{ne}$
-\end_inset
-
-, where (
-\color red
-tabulate and refer to the appendix ? 
-\color inherit
-) 
-\begin_inset Formula $E_{y}$
-\end_inset
-
- is the magnitude of the electric field created by the charge pile-up, 
-\begin_inset Formula $J_{x}$
-\end_inset
-
- is the current density in the sample, 
-\begin_inset Formula $B$
-\end_inset
-
- is the magnitude of the magnetic field, 
-\begin_inset Formula $d$
-\end_inset
-
- is the thickness of the sample (in a case of a rectangular, perpendiculat
- to field chip), 
-\begin_inset Formula $n$
-\end_inset
-
- is the charge carrier density and 
-\begin_inset Formula $e$
-\end_inset
-
-is the electronic charge.
- Another way of quantifying the hall effect is the Hall angle 
-\begin_inset Formula $\phi_{H}$
-\end_inset
-
- defined as: 
-\begin_inset Formula $\phi_{H}=\frac{V_{y}}{V_{x}}=\frac{E_{y}w}{E_{x}l}=\frac{w}{l}\mu_{H}B$
-\end_inset
-
-, where 
-\begin_inset Formula $V_{x}$
-\end_inset
-
- is the Hall voltage drop accross a width 
-\begin_inset Formula $w$
-\end_inset
-
- on the sample, 
-\begin_inset Formula $V_{y}$
-\end_inset
-
- is the voltage drop acroos a length 
-\begin_inset Formula $l$
-\end_inset
-
- on the sample, 
-\begin_inset Formula $E_{y}$
-\end_inset
-
- and 
-\begin_inset Formula $E_{x}$
-\end_inset
-
- are corresponding electric fields, and 
-\begin_inset Formula $\mu_{H}$
-\end_inset
-
- is the mobility, where the mobility 
-\begin_inset Formula $\mu$
-\end_inset
-
- of a charge carrier is defined as 
-\begin_inset Formula $\mu=\frac{\sigma}{ne}$
-\end_inset
-
-, where 
-\begin_inset Formula $\sigma=\nicefrac{1}{\rho}$
-\end_inset
-
- is the conductivity of the material (inverse of the resistivity).
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
+AAAAAAAAAAAAAAAAAAAAAAAAAAARutherford gold foil experiment lead to some
+ very important discoveries such as the current atom model.
+ The experiment Rutherford performed was to 
 \end_layout
 
 \begin_layout Section
@@ -282,25 +175,6 @@ A
 
 \begin_layout Section
 Uncertainty management
-\end_layout
-
-\begin_layout Standard
-AAAAAAAAAAAAAAAA
-\end_layout
-
-\begin_layout Standard
-AAAAAAAAAAA
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Appendix 
 \end_layout
 
 \begin_layout Standard
