@@ -335,6 +335,9 @@ reference "3"
  In semiconductors, the energy band gap is much smaller and the majority
  of the electrons will be in the valence band but some will reach the conduction
  band and be charge carriers.
+ At higher temperatures, we reach the limit where the carrier density varies
+ with temperature.
+ In this case the conductivity follows Maxwell distribution with an exponential.
  This experiment is a step towards measuring the band gap of germanium.
 \end_layout
 
@@ -853,44 +856,22 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/Simple plots/slow_warming.5.png
 	lyxscale 30
-	scale 50
+	scale 60
 
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-qquad
-\end_layout
-
+\begin_inset space \hfill{}
 \end_inset
 
 
 \begin_inset Graphics
 	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/Simple plots/slow_warming.6.png
-	lyxscale 50
-	scale 50
+	lyxscale 30
+	scale 60
 
 \end_inset
 
@@ -953,19 +934,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/RvsT/fit_power.png
 	lyxscale 30
@@ -974,16 +942,7 @@ centering
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-qquad
-\end_layout
-
+\begin_inset space \hfill{}
 \end_inset
 
 
