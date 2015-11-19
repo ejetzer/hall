@@ -14,11 +14,11 @@ Note: the `Outline/Lab Outline.ipynb` file is an iPython notebook that can be op
 
 ## To do
 
-- [] Take two other data runs for R vs T
-- [] Find an axplanation for systematic error in V vs T
-- [] Take more measurements for uncertainties:
-    - Cold temperature equilibrium (lots of liquid nitrogen)
-    - Room temperature (in the thermos)
-- [] Write methods and analysis for band gap
-- [] Write methods and analysis for Hall coefficient
-- [] Write methods and analysis for magnetoresistance
+- [ ] Take two other data runs for R vs T
+- [ ] Find an axplanation for systematic error in V vs T
+- [ ] Take more measurements for uncertainties:
+    - [ ] Cold temperature equilibrium (lots of liquid nitrogen)
+    - [ ] Room temperature (in the thermos)
+- [ ] Write methods and analysis for band gap
+- [ ] Write methods and analysis for Hall coefficient
+- [ ] Write methods and analysis for magnetoresistance
