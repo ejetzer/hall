@@ -5,39 +5,45 @@ import spinmob, glob, sys, matplotlib.pylab as pylab, scipy
 
 def fit_exp(Ts, Rs, Rerr, eguess):
     'Fit an exponential function to the data'
-    model, ps = 'a * exp(b * x)', 'a,b'
+    Rs, Rerr = pylab.array(Rs), pylab.array(Rerr)
+    model, ps = '1/a * exp(b * x)', 'a,b'
     # Make intelligent guesses for the parameters
     a, b = eguess
-    b = pylab.log(Rs[-1]/Rs[0]) / ( Ts[-1] - Ts[0] )
+    Gs = 1 / Rs
+    Gerr = -1 / Rs**2 * Rerr
+    b = pylab.log(Gs[0]/Gs[1]) / ( Gs[-1] - Gs[0] )
     # Create a spinmob fitter
     fitter = spinmob.data.fitter(model, ps)
-    fitter.set_data(Ts, Rs, Rerr)
+    fitter.set_data(Ts, Gs, Gerr)
     fitter.set(a=a, b=b) # Set guesses
     fitter.set(xlabel='Temperature (K)',
-               ylabel='Resistance ($\Omega$)')
+               ylabel='Resistance ($\Omega^{-1}$)')
     # Fit.
     fitter.fit()
     spinmob.tweaks.ubertidy(keep_axis_labels=True)
-    pylab.savefig('../Graphs/RvsT/fit_exp.png')
-    pylab.savefig('../Graphs/RvsT/fit_exp.pdf')
+    pylab.savefig('../Graphs/GvsT/fit_exp.png')
+    pylab.savefig('../Graphs/GvsT/fit_exp.pdf')
     return fitter
 
 def fit_power(Ts, Rs, Rerr, pguess):
     'Fit a power function to the data'
-    model, ps = 'a * (x-x0)**(3/2)', 'a,x0'
+    Rs, Rerr = pylab.array(Rs), pylab.array(Rerr)
+    model, ps = '1/a * (x-x0)**(-3/2)', 'a,x0'
     # Make intelligent guesses for the parameters
     a, x0 = pguess
+    Gs = 1 / Rs
+    Gerr = -1 / Rs**2 * Rerr
     # Create a spinmob fitter
     fitter = spinmob.data.fitter(model, ps)
-    fitter.set_data(Ts, Rs, Rerr)
+    fitter.set_data(Ts, Gs, Gerr)
     fitter.set(a=a, x0=x0) # Set guesses
     fitter.set(xlabel='Temperature (K)',
-               ylabel='Resistance ($\Omega$)')
+               ylabel='Conductance ($\Omega^{-1}$)')
     # Fit.
     fitter.fit()
     spinmob.tweaks.ubertidy(keep_axis_labels=True)
-    pylab.savefig('../Graphs/RvsT/fit_power.png')
-    pylab.savefig('../Graphs/RvsT/fit_power.pdf')
+    pylab.savefig('../Graphs/GvsT/fit_power.png')
+    pylab.savefig('../Graphs/GvsT/fit_power.pdf')
     return fitter
 
 def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):

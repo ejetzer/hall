@@ -1,5 +1,7 @@
 # Hall Effect Experiment
 
+## File structure
+
 - `Data` is where we will put all of the raw data
 - `Graphs` is where the figures go
 - `Manual`is where we look for the… manual
@@ -10,4 +12,13 @@
 
 Note: the `Outline/Lab Outline.ipynb` file is an iPython notebook that can be opened using the iPython Notebook app from the Anaconda launcher. It can also technically be read by anything that handles Jupyter notebooks. We'll put things in it like *everything we have to do* and code snippets, and links and stuff. Feel free to edit.
 
-Error : Don't take errors from the computer program. Take a single voltage value and measure it a couple of times and find the standard deviation. try it maybe for another voltage and then use it as the error. 
+## To do
+
+- [] Take two other data runs for R vs T
+- [] Find an axplanation for systematic error in V vs T
+- [] Take more measurements for uncertainties:
+    - Cold temperature equilibrium (lots of liquid nitrogen)
+    - Room temperature (in the thermos)
+- [] Write methods and analysis for band gap
+- [] Write methods and analysis for Hall coefficient
+- [] Write methods and analysis for magnetoresistance
