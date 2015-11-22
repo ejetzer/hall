@@ -3,67 +3,73 @@
 
 import spinmob, glob, sys, matplotlib.pylab as pylab, scipy
 
-def fit_exp(Ts, Rs, Rerr):
+def fit_exp(Ts, Rs, Rerr, eguess):
     'Fit an exponential function to the data'
-    model, ps = 'a * exp(b * (x-x0))', 'a,b,x0'
+    Rs, Rerr = pylab.array(Rs), pylab.array(Rerr)
+    model, ps = '1/a * exp(b * x)', 'a,b'
     # Make intelligent guesses for the parameters
-    a, b, x0 = 1, 1, 0
+    a, b = eguess
+    b = pylab.log(Rs[0]/Rs[1]) / ( Rs[-1] - Rs[0] )
     # Create a spinmob fitter
     fitter = spinmob.data.fitter(model, ps)
     fitter.set_data(Ts, Rs, Rerr)
-    fitter.set(a=a, b=b, x0=x0) # Set guesses
+    fitter.set(a=a, b=b) # Set guesses
+    fitter.set(xlabel='Temperature (K)',
+               ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
-    spinmob.tweaks.ubertidy(keep_axis_labels=True)
     pylab.savefig('../Graphs/RvsT/fit_exp.png')
     pylab.savefig('../Graphs/RvsT/fit_exp.pdf')
     return fitter
 
-def fit_power(Ts, Rs, Rerr):
+def fit_power(Ts, Rs, Rerr, pguess):
     'Fit a power function to the data'
-    model, ps = 'a * (x-x0)**(3/2)', 'a,x0'
+    Rs, Rerr = pylab.array(Rs), pylab.array(Rerr)
+    model, ps = 'a * (x-x0)**(3/2) + b', 'a,x0,b'
     # Make intelligent guesses for the parameters
-    a, x0 = 1, 1
+    a, x0, b = pguess
     # Create a spinmob fitter
     fitter = spinmob.data.fitter(model, ps)
     fitter.set_data(Ts, Rs, Rerr)
-    fitter.set(a=a, x0=x0) # Set guesses
+    fitter.set(a=a, x0=x0, b=b) # Set guesses
+    fitter.set(xlabel='Temperature (K)',
+               ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
-    spinmob.tweaks.ubertidy(keep_axis_labels=True)
     pylab.savefig('../Graphs/RvsT/fit_power.png')
     pylab.savefig('../Graphs/RvsT/fit_power.pdf')
     return fitter
 
-def splitfit(Ts, Rs, es, a, b, c, d):
+def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     ## Split the data in two parts
     x1, x2, y1, y2, e1, e2 = [], [], [], [], [], []
-    for T, R, e in zip(Ts, Rs, es):
+    for T, R, pe, ee in zip(Ts, Rs, es[0], es[1]):
         if a < T < b:
             x1.append(T)
             y1.append(abs(R))
-            e1.append(e)
+            e1.append(pe)
         elif c < T < d:
             x2.append(T)
             y2.append(abs(R))
-            e2.append(e)
+            e2.append(ee)
     ## Fit one part with the exponential
-    fit1 = fit_power(x1, y1, e1)
+    fit1 = fit_power(x1, y1, e1, pguess)
     ## Fit one part with the polynomial
-    fit2 = fit_exp(x2, y2, e2)
+    fit2 = fit_exp(x2, y2, e2, eguess)
     return fit1, fit2
 
-def main(data_file, a, b, c, d):
+def main(data_file, a, b, c, d, pguess, eguess, perr=1, eerr=1):
     databox = spinmob.data.load(data_file)
-    xs, ys, es = databox[0], databox[1], databox[2]
+    xs, ys, es, Ns = databox[:4]
+    pes, ees = perr / pylab.sqrt(Ns), eerr / pylab.sqrt(Ns)
     if 'current' in databox.hkeys:
         current = databox.h('current')
     else:
         current = 0.001 # A
         databox.h(current=current)
     Rs = ys / current
-    Rerrs = es / current
-    fits = splitfit(xs, Rs, Rerrs, a, b, c, d)
+    Rerrs = pes / current, ees / current
+    fits = splitfit(xs, Rs, Rerrs, a, b, c, d, pguess, eguess)
     return fits
 
 if __name__ == '__main__':
