@@ -25,7 +25,7 @@ def fit_exp(Ts, Rs, Rerr, eguess):
 def fit_power(Ts, Rs, Rerr, pguess):
     'Fit a power function to the data'
     Rs, Rerr = pylab.array(Rs), pylab.array(Rerr)
-    model, ps = 'a * (x-x0)**(3/2) + b', 'a,x0,b'
+    model, ps = 'a * (x-x0) + b', 'a,x0,b'
     # Make intelligent guesses for the parameters
     a, x0, b = pguess
     # Create a spinmob fitter
