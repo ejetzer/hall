@@ -120,30 +120,82 @@ In this report we go over how we fit a power and exponential functions to
  the resistance of a germanium sample at different temperatures (from 140K
  to 390K).
  The two fits, 
-\begin_inset Formula $0.00554(4)\Omega\mathrm{K}^{-3/2}\times(T-120(1)\mathrm{K})^{3/2}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.00554(4)
+\backslash
+Omega
+\backslash
+mathrm{K}^{-3/2}
+\backslash
+times(T-120(1)
+\backslash
+mathrm{K})^{3/2}$
+\end_layout
+
 \end_inset
 
  and 
-\begin_inset Formula $12660(20)\Omega\times e^{(-0.026360(3)\mathrm{K}^{-1}T)}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$12660(20)
+\backslash
+Omega
+\backslash
+times
+\backslash
+exp(-0.026360(3)
+\backslash
+mathrm{K}^{-1}T)$
+\end_layout
+
 \end_inset
 
 , with 
-\begin_inset Formula $\chi^{2}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+chi^2$
+\end_layout
+
 \end_inset
 
  of 
-\begin_inset Formula $2.1$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.1$
+\end_layout
+
 \end_inset
 
  and 
-\begin_inset Formula $7656$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7656$
+\end_layout
+
 \end_inset
 
 , will allow us to compute the band gap of the germanium sample in a further
  experiment.
  The exponential fit to the high temperature region of the resistance is
  not reliable and further error analysis is required.
- 
 \end_layout
 
 \begin_layout Standard
@@ -173,7 +225,14 @@ The resistance of semiconductors like germanium is dependant on temperature.
 \end_inset
 
  and charge 
-\begin_inset Formula $e$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$e$
+\end_layout
+
 \end_inset
 
  for each charge, the current density related to the mean velocity 
@@ -234,11 +293,17 @@ reference "2"
 \end_inset
 
  is related to the temperature 
-\begin_inset Formula $T$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$T$
+\end_layout
+
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -284,10 +349,6 @@ reference "3"
 \end_layout
 
 \begin_layout Section
-Potential error
-\end_layout
-
-\begin_layout Section
 Function of resistance against temperature 
 \end_layout
 
@@ -327,11 +388,31 @@ Thanks Mark!
 \end_inset
 
  called 
-\begin_inset Formula $\texttt{hall}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{hall}
+\end_layout
+
 \end_inset
 
  and 
-\begin_inset Formula $\texttt{hall\_process}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{hall
+\backslash
+_process}
+\end_layout
+
 \end_inset
 
  allow us to, respectively, collect data from the voltmeter, and format
@@ -432,11 +513,25 @@ centering
 \begin_layout Plain Layout
 Points on the sample holder circuit where the potential is measured.
  
-\begin_inset Formula $V_{5}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_5$
+\end_layout
+
 \end_inset
 
  and 
-\begin_inset Formula $V_{6}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_6$
+\end_layout
+
 \end_inset
 
  measure the potential across the germanium sample, and should in theory
@@ -467,13 +562,31 @@ name "fig:sample"
 
 \begin_layout Standard
 To run the experiment, we turned on the current source at a constant 
-\begin_inset Formula $I_{fixed}=100\mathrm{mA}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$I_{fixed}=100
+\backslash
+mathrm{mA}$
+\end_layout
+
 \end_inset
 
 , thermocouple, and multimeter.
  We cooled down the germanium sample with liquid nitrogen until the temperature
  stabilized, around 
-\begin_inset Formula $140\mathrm{K}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$140
+\backslash
+mathrm{K}$
+\end_layout
+
 \end_inset
 
 .
@@ -483,22 +596,58 @@ To run the experiment, we turned on the current source at a constant
  We did this by taking a paper towel to brush off the ice forming around
  the thermos.
  We used 
-\begin_inset Formula $\texttt{hall}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{hall}
+\end_layout
+
 \end_inset
 
  to check on the temperature.
- Once the temperature had stabilized, we restarted
-\begin_inset Formula $\texttt{hall}$
+ Once the temperature had stabilized, we restarted 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+texttt{hall}
+\end_layout
+
 \end_inset
 
  to get a data file with only the data we needed.
  When the temperature had reached 
-\begin_inset Formula $250\mathrm{K}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$250
+\backslash
+mathrm{K}$
+\end_layout
+
 \end_inset
 
 , we turned on the heater with a low potential to help bring the sample
- up to
-\begin_inset Formula $400\mathrm{K}$
+ up to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$400
+\backslash
+mathrm{K}$
+\end_layout
+
 \end_inset
 
 .
@@ -514,11 +663,29 @@ To estimate the error on the measurements, we took another series of potential
  The standard deviation of the potential at those temperature was then be
  used as the error for low and high temperatures, respectively.
  This gave a statistical uncertainty of 
-\begin_inset Formula $0.005\mathrm{V}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.005
+\backslash
+mathrm{V}$
+\end_layout
+
 \end_inset
 
  for low temperatures, and 
-\begin_inset Formula $0.00002\mathrm{V}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.00002
+\backslash
+mathrm{V}$
+\end_layout
+
 \end_inset
 
  for high temperatures.
@@ -536,20 +703,50 @@ reference "fig:shape"
 
 .
  We fit a power function of the form 
-\begin_inset Formula $a(x-x_{0})^{3/2}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a(x-x_0)^{3/2}$
+\end_layout
+
 \end_inset
 
  to the left side, and an exponential function 
-\begin_inset Formula $ae^{bx}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a
+\backslash
+exp bx$
+\end_layout
+
 \end_inset
 
  to the right side.
  The results for resistance 
-\begin_inset Formula $R=V/I_{fixed}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R=V/I_{fixed}$
+\end_layout
+
 \end_inset
 
  against temperature on 
-\begin_inset Formula $V_{6}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_6$
+\end_layout
+
 \end_inset
 
  are shown in Fig.
@@ -562,29 +759,91 @@ reference "fig:fits"
 
 .
  The obtained functions are 
-\begin_inset Formula $0.00554(4)\Omega\mathrm{K}^{-3/2}\times(T-120(1)\mathrm{K})^{3/2}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$0.00554(4)
+\backslash
+Omega
+\backslash
+mathrm{K}^{-3/2}
+\backslash
+times(T-120(1)
+\backslash
+mathrm{K})^{3/2}$
+\end_layout
+
 \end_inset
 
  and 
-\begin_inset Formula $12660(20)\Omega\times\exp(-0.026360(3)\mathrm{K}^{-1}T)$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$12660(20)
+\backslash
+Omega
+\backslash
+times
+\backslash
+exp(-0.026360(3)
+\backslash
+mathrm{K}^{-1}T)$
+\end_layout
+
 \end_inset
 
 , with 
-\begin_inset Formula $\chi^{2}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+chi^2$
+\end_layout
+
 \end_inset
 
  of 
-\begin_inset Formula $2.1$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2.1$
+\end_layout
+
 \end_inset
 
  and 
-\begin_inset Formula $7656$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$7656$
+\end_layout
+
 \end_inset
 
  respectively.
  The power fit is good and can be used for the further parts fo the experiment.
- The exponential fit is not reliable, considering its large
-\begin_inset Formula $\chi^{2}$
+ The exponential fit is not reliable, considering its large 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+chi^2$
+\end_layout
+
 \end_inset
 
 , and the error analysis on it should be reviewed before we move on.
@@ -624,11 +883,25 @@ status open
 
 \begin_layout Plain Layout
 Potential 
-\begin_inset Formula $V_{5}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_5$
+\end_layout
+
 \end_inset
 
  (on the left) and 
-\begin_inset Formula $V_{6}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_6$
+\end_layout
+
 \end_inset
 
  (on the right) against temperature
@@ -709,23 +982,6 @@ name "fig:fits"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Hall coefficient as a function of Temperature
-\end_layout
-
-\begin_layout Standard
-We are waiting for the data 
-\end_layout
-
-\begin_layout Section
-Magneto-resistance against magnetic field intensity 
-\end_layout
-
-\begin_layout Standard
-Will do the data later.
- 
 \end_layout
 
 \begin_layout Standard

@@ -287,6 +287,10 @@ reference "3"
 Potential error
 \end_layout
 
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Section
 Function of resistance against temperature 
 \end_layout
@@ -331,9 +335,12 @@ Thanks Mark!
 \end_inset
 
  and 
+
 \begin_inset Formula $\texttt{hall\_process}$
 \end_inset
 
+
+\lang english
  allow us to, respectively, collect data from the voltmeter, and format
  the data into several more manageable files.
 \end_layout
@@ -436,9 +443,12 @@ Points on the sample holder circuit where the potential is measured.
 \end_inset
 
  and 
+
 \begin_inset Formula $V_{6}$
 \end_inset
 
+
+\lang english
  measure the potential across the germanium sample, and should in theory
  give the same result.
  In practice, systematic error due to the shape of the sample may make them
@@ -467,15 +477,21 @@ name "fig:sample"
 
 \begin_layout Standard
 To run the experiment, we turned on the current source at a constant 
+
 \begin_inset Formula $I_{fixed}=100\mathrm{mA}$
 \end_inset
 
+
+\lang english
 , thermocouple, and multimeter.
  We cooled down the germanium sample with liquid nitrogen until the temperature
  stabilized, around 
+
 \begin_inset Formula $140\mathrm{K}$
 \end_inset
 
+
+\lang english
 .
  During the experiment, we made sure the nitrogen could evaporate from the
  thermos, otherwise the sample wouldn't warm back up to room temperature
@@ -483,24 +499,36 @@ To run the experiment, we turned on the current source at a constant
  We did this by taking a paper towel to brush off the ice forming around
  the thermos.
  We used 
+
 \begin_inset Formula $\texttt{hall}$
 \end_inset
 
+
+\lang english
  to check on the temperature.
  Once the temperature had stabilized, we restarted
+
 \begin_inset Formula $\texttt{hall}$
 \end_inset
 
+
+\lang english
  to get a data file with only the data we needed.
  When the temperature had reached 
+
 \begin_inset Formula $250\mathrm{K}$
 \end_inset
 
+
+\lang english
 , we turned on the heater with a low potential to help bring the sample
  up to
+
 \begin_inset Formula $400\mathrm{K}$
 \end_inset
 
+
+\lang english
 .
  We raised the heater voltage each time the temperature stabilized again.
  Once the heater's power source had been set to its maximal output and an
@@ -514,13 +542,19 @@ To estimate the error on the measurements, we took another series of potential
  The standard deviation of the potential at those temperature was then be
  used as the error for low and high temperatures, respectively.
  This gave a statistical uncertainty of 
+
 \begin_inset Formula $0.005\mathrm{V}$
 \end_inset
 
+
+\lang english
  for low temperatures, and 
+
 \begin_inset Formula $0.00002\mathrm{V}$
 \end_inset
 
+
+\lang english
  for high temperatures.
 \end_layout
 
@@ -536,22 +570,31 @@ reference "fig:shape"
 
 .
  We fit a power function of the form 
+
 \begin_inset Formula $a(x-x_{0})^{3/2}$
 \end_inset
 
+
+\lang english
  to the left side, and an exponential function 
 \begin_inset Formula $ae^{bx}$
 \end_inset
 
  to the right side.
  The results for resistance 
+
 \begin_inset Formula $R=V/I_{fixed}$
 \end_inset
 
+
+\lang english
  against temperature on 
+
 \begin_inset Formula $V_{6}$
 \end_inset
 
+
+\lang english
  are shown in Fig.
  
 \begin_inset CommandInset ref
@@ -562,31 +605,49 @@ reference "fig:fits"
 
 .
  The obtained functions are 
+
 \begin_inset Formula $0.00554(4)\Omega\mathrm{K}^{-3/2}\times(T-120(1)\mathrm{K})^{3/2}$
 \end_inset
 
+
+\lang english
  and 
+
 \begin_inset Formula $12660(20)\Omega\times\exp(-0.026360(3)\mathrm{K}^{-1}T)$
 \end_inset
 
+
+\lang english
 , with 
+
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
+
+\lang english
  of 
+
 \begin_inset Formula $2.1$
 \end_inset
 
+
+\lang english
  and 
+
 \begin_inset Formula $7656$
 \end_inset
 
- respectively.
+ 
+\lang english
+respectively.
  The power fit is good and can be used for the further parts fo the experiment.
  The exponential fit is not reliable, considering its large
+
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
+
+\lang english
 , and the error analysis on it should be reviewed before we move on.
 \end_layout
 
@@ -628,9 +689,12 @@ Potential
 \end_inset
 
  (on the left) and 
+
 \begin_inset Formula $V_{6}$
 \end_inset
 
+
+\lang english
  (on the right) against temperature
 \end_layout
 
