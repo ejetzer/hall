@@ -72,6 +72,20 @@ def main(data_file, a, b, c, d, pguess, eguess, perr=1, eerr=1):
     fits = splitfit(xs, Rs, Rerrs, a, b, c, d, pguess, eguess)
     return fits
 
+def print_results(fits):
+    models = ('# Power fit', '# Exponential fit')
+    for model, fit in zip(models, fits):
+        print model
+        print
+        text = str(fit)
+        lines = text.split('\n')
+        limit = -1
+        # Only print the results
+        for index, line in enumerate(lines):
+            if 'FIT RESULTS' in line: limit = index
+            if 0 < limit <= index: print line
+        print
+
 if __name__ == '__main__':
     data_file = sys.argv[1]
     a, b, c, d = sorted([float(i) for i in sys.argv[2:6]])
