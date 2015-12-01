@@ -263,16 +263,7 @@ Figure ......
  A digital multimeter (DMM) reads the different voltages of interest for
  the experiment and reads the temperature and current through the sample.
  These values are displayed on the apparatus and can be seen on a computer.
- Before introducting next characteristic we are interested in the experiment,
- a common physical quantity, the moblility 
-\begin_inset Formula $\mu$
-\end_inset
-
- of the charge carriers, is defined as 
-\begin_inset Formula $\mu=\frac{\textbf{v}}{\textbf{E}}=\frac{\sigma}{ne}$
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Standard
