@@ -140,6 +140,54 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+Some very interesting characteristics of crystals can be analyzed experimentally.
+ Such characteristics are the resistivity of a crystal as a function of
+ temperature, the hall voltage (this potential difference created by the
+ separation of charges in the crystal when a magnetic field is applied on
+ the crystal) as a function of temperature and how the intensity of the
+ magnetic field affects the resistance of the crystal.
+ In this experiment we will choose thevgermanium semiconductor as our crystal
+ to analyze.
+ 
+\end_layout
+
+\begin_layout Standard
+In order to do analyze this characteristics we need to understand the theory
+ behind them.
+ The resistance of semiconductors like germanium is dependent on temperature.
+ Indeed when negative carriers with density 
+\begin_inset Formula $n$
+\end_inset
+
+ and charge 
+\begin_inset Formula $e$
+\end_inset
+
+for each charge, the currenty density 
+\begin_inset Formula $\textbf{J}$
+\end_inset
+
+ relates to the mean velocity 
+\begin_inset Formula $\textbf{v}$
+\end_inset
+
+ of the cahrge carriers by : 
+\begin_inset Formula $\textbf{J}=en\textbf{v}$
+\end_inset
+
+.
+ It also relates to the conductivity 
+\begin_inset Formula $\sigma=\nicefrac{1}{\rho}$
+\end_inset
+
+ by the equation 
+\begin_inset Formula $\textbf{J}=\sigma\textbf{E}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
