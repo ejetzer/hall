@@ -36,8 +36,8 @@ def fit_power(Ts, Rs, Rerr, pguess):
                ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
-    pylab.savefig('../Graphs/RvsT/fit_power.png')
-    pylab.savefig('../Graphs/RvsT/fit_power.pdf')
+    #pylab.savefig('../Graphs/RvsT/fit_power.png')
+    #pylab.savefig('../Graphs/RvsT/fit_power.pdf')
     return fitter
 
 def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
@@ -56,6 +56,7 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     fit1 = fit_power(x1, y1, e1, pguess)
     ## Fit one part with the polynomial
     fit2 = fit_exp(x2, y2, e2, eguess)
+    a1, x01, b1 = fit1.results()
     return fit1, fit2
 
 def main(data_file, a, b, c, d, pguess, eguess, perr=1, eerr=1):
