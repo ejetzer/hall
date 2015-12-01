@@ -81,7 +81,7 @@
 \begin_body
 
 \begin_layout Title
-Temperature dependance of the resistance of germanium
+The Hall Effect and Properties of Semiconductors
 \end_layout
 
 \begin_layout Quotation
@@ -146,7 +146,7 @@ Some very interesting characteristics of crystals can be analyzed experimentally
  separation of charges in the crystal when a magnetic field is applied on
  the crystal) as a function of temperature and how the intensity of the
  magnetic field affects the resistance of the crystal.
- In this experiment we will choose thevgermanium semiconductor as our crystal
+ In this experiment we will choose the germanium semiconductor as our crystal
  to analyze.
  
 \end_layout
@@ -163,7 +163,7 @@ In order to do analyze this characteristics we need to understand the theory
 \begin_inset Formula $e$
 \end_inset
 
-for each charge, the currenty density 
+for each charge, the current density 
 \begin_inset Formula $\textbf{J}$
 \end_inset
 
@@ -171,7 +171,7 @@ for each charge, the currenty density
 \begin_inset Formula $\textbf{v}$
 \end_inset
 
- of the cahrge carriers by : 
+ of the charge carriers by : 
 \begin_inset Formula $\textbf{J}=en\textbf{v}$
 \end_inset
 
@@ -263,13 +263,138 @@ Figure ......
  A digital multimeter (DMM) reads the different voltages of interest for
  the experiment and reads the temperature and current through the sample.
  These values are displayed on the apparatus and can be seen on a computer.
- Before introducting next characteristic we are interested in the experiment,
- a common physical quantity, the moblility 
+ 
+\end_layout
+
+\begin_layout Standard
+Before introducing next characteristic we are interested in the experiment,
+ a common physical quantity, the mobility 
 \begin_inset Formula $\mu$
 \end_inset
 
  of the charge carriers, is defined as 
 \begin_inset Formula $\mu=\frac{\textbf{v}}{\textbf{E}}=\frac{\sigma}{ne}$
+\end_inset
+
+.
+ When a magnetic field is applied while current is driven through the sample,
+ a force is induced separating the carriers in such a way that a potential
+ difference is created across the sides of the sample.
+ This potential is called the Hall Voltage 
+\begin_inset Formula $V_{H}$
+\end_inset
+
+.
+ This effect can also be quantified by the Hall coefficient defined to be
+ 
+\begin_inset Formula $R_{H}=\frac{E_{y}}{J_{x}B}=\frac{V_{H}d}{IB}=\frac{1}{ne}$
+\end_inset
+
+, where
+\begin_inset Formula $E_{y}$
+\end_inset
+
+ is the magnitude of the electric field created by the charge pile-up ,
+ 
+\begin_inset Formula $J_{x}$
+\end_inset
+
+is the current density in the sample, B is the magnitude of the magnetic
+ field and d is the thickness of the sample (for a rectangle model perpendicular
+ to the field).
+ Another way to quantify the effect is the Hall angle 
+\begin_inset Formula $\phi_{H}=\frac{V_{y}}{V_{x}}=\frac{E_{y}w}{E_{x}l}=\frac{w}{l}\mu_{H}B$
+\end_inset
+
+, where 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+ is the Hall voltage drop across a width 
+\begin_inset Formula $w$
+\end_inset
+
+ on the sample, and 
+\begin_inset Formula $V_{y}$
+\end_inset
+
+ is the voltage drop across a length 
+\begin_inset Formula $l$
+\end_inset
+
+ on the sample.
+ 
+\begin_inset Formula $E_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{y}$
+\end_inset
+
+ are the corresponding electric fields and 
+\begin_inset Formula $\mu_{H}$
+\end_inset
+
+ corresponds to the mobility.
+ 
+\end_layout
+
+\begin_layout Standard
+In a semiconductor the charge carriers can be negative carriers (carrier
+ density 
+\begin_inset Formula $n$
+\end_inset
+
+) or positive carriers (carrier density 
+\begin_inset Formula $p$
+\end_inset
+
+).
+ The force induced by the magnetic field, thus, push them in opposite direction
+ along a 
+\begin_inset Formula $y$
+\end_inset
+
+direction according to the sign of the carriers.
+ Realizing that the net current must be zero and using the previous definition
+ we can obtain an equation for the Hall coefficient in terms of the mobilities
+ and the carriers densities: 
+\begin_inset Formula 
+\[
+R_{H}=\frac{\mu_{+}^{2}p-\mu_{-}^{2}n}{e(\mu_{+}p-\mu_{-}n)}
+\]
+
+\end_inset
+
+These mobilities very with temperature.
+ When 
+\begin_inset Formula $p>n$
+\end_inset
+
+ we expect 
+\begin_inset Formula $R_{H}$
+\end_inset
+
+ to change sign at some temperature (as 
+\begin_inset Formula $p$
+\end_inset
+
+increases and 
+\begin_inset Formula $n$
+\end_inset
+
+ decreases with increasing temperature).
+ Such semiconductors are said to be 
+\begin_inset Formula $p-type$
+\end_inset
+
+.
+ Semiconductors which has 
+\begin_inset Formula $n>p$
+\end_inset
+
+ are said to be 
+\begin_inset Formula $n-type$
 \end_inset
 
 .
@@ -287,7 +412,7 @@ Potential error
 \end_layout
 
 \begin_layout Section
-Function of resistance against temperature 
+Function of conductance against temperature 
 \end_layout
 
 \begin_layout Section
