@@ -5,3 +5,5 @@ extrinsic and intrinsic semiconductors explained beautifully: https://www.youtub
 semiconductors: https://www.youtube.com/watch?v=0sGXz6dD7C4
 
 Avantages of extrinsic compared to intrinsic: https://www.youtube.com/watch?v=paDm3w_c4JM
+
+Magneto-resistance: http://www2.physics.ox.ac.uk/sites/default/files/BandMT_11.pdf

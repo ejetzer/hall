@@ -11,9 +11,11 @@ def simple_plot(data_file, title=None, fct=lambda x: x,
     for df in data_file:
         databox = spinmob.data.load(df)
         xs, ys = databox[0], databox[1]
-        if xmin: pylab.xmin(xmin)
-        if xmax: pylab.xmax(xmax)
-        pylab.plot(xs, fct(abs(ys)), '.')
+        if not xmin: xmin = min(xs)
+        if not xmax: xmax = max(xs)
+        ys = [fct(abs(y)) for x, y in zip(xs, ys) if xmin <= x <= xmax]
+        xs = [x for x in xs if xmin <= x <= xmax]
+        pylab.plot(xs, ys, '.')
     if title: pylab.title(title)
     pylab.xlabel(xlabel)
     pylab.ylabel(ylabel)
