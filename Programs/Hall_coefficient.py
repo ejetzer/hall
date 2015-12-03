@@ -33,7 +33,7 @@ def fit_power(Ts, Rs, Rerr, pguess):
     fitter.fit()
     return fitter
 
-def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
+def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess, outfile=None):
     ## Split the data in two parts
     x1, x2, y1, y2, e1, e2 = [], [], [], [], [], []
     for T, R, pe, ee in zip(Ts, Rs, es[0], es[1]):
@@ -54,6 +54,10 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     fct1 = lambda x: res1[0] * (x - res1[1])
     fct2 = lambda x: res2[0] * pylab.exp(res2[1]/x)
     pylab.clf()
+    make_fig(Ts, Rs, es, a, b, c, d, fct1, fct2, outfile)
+    return fit1, fit2
+
+def make_fig(Ts, Rs, es, a, b, c, d, fct1, fct2, outfile):
     fig = pylab.figure()
     gs = gridspec.GridSpec(4, 4)
     TR = fig.add_subplot(gs[1:, :])
@@ -62,9 +66,9 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     TR.plot(xs, fct1(xs), '-', color='red')
     xs = pylab.linspace(c, d, 100)
     TR.plot(xs, fct2(xs), '-', color='red')
-    pylab.xlim(225, 400)
+    pylab.xlim(200, 400)
     pylab.xlabel('Temperature (K)')
-    pylab.ylabel('Resistance ($\\Omega$)')
+    pylab.ylabel('Hall coefficient ($\\mathrm{m}^3/\\mathrm{C}$)')
     residual1 = fig.add_subplot(gs[0, :2])
     xs = [x for x in Ts if a <= x <= b]
     ys = [(y - fct1(x))/e for x, y, e in zip(Ts, Rs, es[0]) if a <= x <= b]
@@ -88,49 +92,28 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     pylab.yticks([])
     pylab.ylim(-3, 3)
     pylab.xlim(c, d)
-    fig.savefig('../Graphs/Fits.png')
-    fig.savefig('../Graphs/Fits.pdf')
-    # Zoom in
-    pylab.clf()
-    pylab.xlim(a, b)
-    pylab.errorbar(Ts, Rs, es[0], fmt=',')
-    xs = pylab.linspace(a, b, 100)
-    pylab.plot(xs, fct1(xs), '-')
-    pylab.xlabel('Temperature (K)')
-    pylab.ylabel('Resistance ($\\Omega$)')
-    pylab.savefig('../Graphs/Fits_power.png')
-    pylab.savefig('../Graphs/Fits_power.pdf')
-    # Zoom in on exp
-    pylab.clf()
-    pylab.xlim(c, d)
-    pylab.errorbar(Ts, Rs, es[0], fmt=',')
-    xs = pylab.linspace(c, d, 100)
-    pylab.plot(xs, fct2(xs), '-')
-    pylab.xlabel('Temperature (K)')
-    pylab.ylabel('Resistance ($\\Omega$)')
-    pylab.savefig('../Graphs/Fits_exp.png')
-    pylab.savefig('../Graphs/Fits_exp.pdf')
-    return fit1, fit2
+    if not outfile: outfile = 'Fits'
+    fig.savefig('../Graphs/Hall/'+outfile+'.png')
+    fig.savefig('../Graphs/Hall/'+outfile+'.pdf')
 
-def main(data_files, a, b, c, d, pguess, eguess, perr=1, eerr=1):
+def main(data_files, a, b, c, d, pguess, eguess, perr=1, eerr=1,
+         I=0.001, B=0.5003991, sample_thickness=1e-3,
+         outfile=None):
+    R_H = lambda V_H: V_H*sample_thickness / (I*B) # Vm/AT
+    R_He = lambda V_H, V_He: pylab.sqrt( ( sample_thickness/(I*B) * V_He )**2 + \
+                ( V_H / (I*B) * 1e-4 )**2 + \
+                ( V_H * sample_thickness / (B**2 * I) * 2e-8 )**2 )
     xs, ys, es, Ns = [], [], [], []
     for df in data_files:
         databox = spinmob.data.load(df)
         x, y, e, N = databox[:4]
         xs += list(x)
-        ys += [abs(i) for i in y]
-        es += list(e)
+        ys += [R_H(abs(i)) for i in y]
+        es += [R_He(abs(i), j) for i, j in zip(y, e)]
         Ns += list(N)
     xs, ys, es, Ns = pylab.array(xs), pylab.array(ys), pylab.array(es), pylab.array(Ns)
     pes, ees = perr / pylab.sqrt(Ns), eerr / pylab.sqrt(Ns)
-    if 'current' in databox.hkeys:
-        current = databox.h('current')
-    else:
-        current = 0.001 # A
-        databox.h(current=current)
-    Rs = ys / current
-    Rerrs = pes / current, ees / current
-    fits = splitfit(xs, Rs, Rerrs, a, b, c, d, pguess, eguess)
+    fits = splitfit(xs, ys, (pes, ees), a, b, c, d, pguess, eguess, outfile)
     return fits
 
 def print_results(fits):
