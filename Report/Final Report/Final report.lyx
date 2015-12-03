@@ -222,8 +222,10 @@ for each charge, the current density
 
 .
  (
-\color red
-how can I get more precise without taking to much space
+\color magenta
+how can I get more precise without taking to much spac
+\color cyan
+e
 \color inherit
 ) However equation this equation is valid only if the number of carriers
  remains constant.
@@ -415,6 +417,195 @@ Potential error
 Function of conductance against temperature 
 \end_layout
 
+\begin_layout Standard
+A graph of resistance against temperature was done when the voltage V5 (
+\color red
+Reference to graph of voltages
+\color inherit
+ ) is applied to the sample and another one when the voltage V6 is applied
+ 
+\color red
+(Refer to graph in the appendix
+\color inherit
+).
+ At low temperature when the conduction is mainly due to extrinsic process
+ the number of carriers is constant and we expect it to follow a power law
+ 
+\begin_inset Formula $R\propto T^{b}$
+\end_inset
+
+ (as discussed in the introduction).
+ At high temperature, the carrier density varies with temperature and the
+ electrical conductivity follow Maxwell distribution 
+\begin_inset Formula $R\propto e^{\nicefrac{a}{T}}$
+\end_inset
+
+.
+ For both V5 and V6 we fitted the graph of resistance versus temperature
+ in the low temperature region with a power law equation 
+\begin_inset Formula $a\times(x-x_{0})^{3/2}$
+\end_inset
+
+ , where the parameters are 
+\begin_inset Formula $a$
+\end_inset
+
+and 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ (the value of these parameters are not relevant for the rest of the experiment
+ so we will just report the chi square).
+ Also we fitted the graph in a high temperature region with a exponential
+ decay equation 
+\begin_inset Formula $a\times e^{bx}$
+\end_inset
+
+, where the parameters are 
+\begin_inset Formula $a$
+\end_inset
+
+and 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The chi square for the power fit was found to be 
+\begin_inset Formula $\chi^{2}=0.821$
+\end_inset
+
+ for 
+\begin_inset Formula $V5$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi^{2}=0.845$
+\end_inset
+
+ for 
+\begin_inset Formula $V6$
+\end_inset
+
+ (
+\color magenta
+Is there a better way of stating this
+\color inherit
+).
+ The parameters for the exponential fit were found to be for V5 
+\begin_inset Formula $a=3.96(3)\times10^{-3}$
+\end_inset
+
+ , 
+\begin_inset Formula $b=.$
+\end_inset
+
+ and the chi square is 
+\begin_inset Formula $\chi^{2}=.............$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The conductance now is just the inverse of the resistance 
+\begin_inset Formula $G=\frac{1}{R}\propto\frac{1}{\rho}$
+\end_inset
+
+.
+ The graph of the conductance will just appear to be the inverse of the
+ graph of the resistance versus temperature.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs for final report/GvsT.png
+	lyxscale 40
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fits at low and high temperature region for graphs of conductance versus
+ temperature when V5 is applied and when V6 is applied.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore the to fit equations are the inverse of the equations used to
+ fit the low and high temperature region of the graphs of resistance versus
+ temperature.
+ In the low temperature region we used 
+\begin_inset Formula $\nicefrac{1}{a\times(x-x_{0})^{3/2}}$
+\end_inset
+
+ where the parameters are the same as for the resistance versus temperature
+ ones.
+ Similarly in the high temperature region 
+\begin_inset Formula $\nicefrac{1}{a\times e^{bx}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The parameters for the power law fit were found to be 
+\begin_inset Formula $a=.........$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{0}=...........$
+\end_inset
+
+ and the chi square is 
+\begin_inset Formula $\chi^{2}=.............$
+\end_inset
+
+ (
+\color magenta
+Is there a better way of stating this
+\color inherit
+).
+ The parameters for the exponential fit were found to be 
+\begin_inset Formula $a=.........$
+\end_inset
+
+ , 
+\begin_inset Formula $b=...........$
+\end_inset
+
+ and the chi square is 
+\begin_inset Formula $\chi^{2}=.............$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Hall coefficient as a function of Temperature
 \end_layout
@@ -436,10 +627,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/RvsT/fit_exp.png
-	lyxscale 50
-	scale 70
-	rotateOrigin rightTop
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs for final report/RvsT.png
+	lyxscale 40
+	scale 50
 
 \end_inset
 
@@ -450,7 +640,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Exponential fit for the Resistance versus Temperature.
+Fit at low and high temperature region for graphs of resistance versus temperatu
+re when V5 is applied and when V6 is applied.
+ 
 \end_layout
 
 \end_inset
@@ -468,39 +660,10 @@ Exponential fit for the Resistance versus Temperature.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/RvsT/fit_power.png
-	lyxscale 50
-	scale 70
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Power Fit for the Resistance versus Temperature
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
