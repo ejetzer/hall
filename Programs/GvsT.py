@@ -70,7 +70,7 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     pylab.ylabel('Conductance ($\\Omega^{-1}$)')
     residual1 = fig.add_subplot(gs[0, :2])
     xs = [x for x in Ts if a <= x <= b]
-    ys = [(y - 1/fct1(x))/e for x, y, e in zip(Ts, Rs, Ges[0]) if a <= x <= b]
+    ys = [(1/y - 1/fct1(x))/e for x, y, e in zip(Ts, Rs, Ges[0]) if a <= x <= b]
     residual1.errorbar(xs, ys, 1, fmt=',', color='blue')
     xs = pylab.linspace(a, b, 100)
     residual1.plot(xs, [0 for x in xs], '-', color='red')
@@ -78,18 +78,18 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     pylab.xlim(a, b)
     pylab.xticks([a, b-1])
     pylab.yticks([])
-    pylab.ylim(-10, 10)
+    pylab.ylim(-3, 3)
     pylab.ylabel('Studentized\nresidual')
     residual2 = fig.add_subplot(gs[0, 2:])
     xs = [x for x in Ts if c <= x <= d]
-    ys = [(y - fct2(x))/e for x, y, e in zip(Ts, Rs, Ges[1]) if c <= x <= d]
+    ys = [(1/y - 1/fct2(x))/e for x, y, e in zip(Ts, Rs, Ges[1]) if c <= x <= d]
     residual2.errorbar(xs, ys, 1, fmt=',', color='blue')
     xs = pylab.linspace(c, d, 100)
     residual2.plot(xs, [0 for x in xs], '-', color='red')
     residual2.xaxis.tick_top()
     pylab.xticks([c+1, d])
     pylab.yticks([])
-    pylab.ylim(-10, 10)
+    pylab.ylim(-3, 3)
     pylab.xlim(c, d)
     fig.savefig('../Graphs/Fits.png')
     fig.savefig('../Graphs/Fits.pdf')
