@@ -474,19 +474,19 @@ and
 
 \begin_layout Standard
 The chi square for the power fit was found to be 
-\begin_inset Formula $\chi^{2}=0.821$
+\begin_inset Formula $\chi_{V_{5}}^{2}=0.82$
 \end_inset
 
  for 
-\begin_inset Formula $V5$
+\begin_inset Formula $V_{5}$
 \end_inset
 
  and 
-\begin_inset Formula $\chi^{2}=0.845$
+\begin_inset Formula $\chi_{V6}^{2}=0.85$
 \end_inset
 
  for 
-\begin_inset Formula $V6$
+\begin_inset Formula $V_{6}$
 \end_inset
 
  (
@@ -494,16 +494,24 @@ The chi square for the power fit was found to be
 Is there a better way of stating this
 \color inherit
 ).
- The parameters for the exponential fit were found to be for V5 
-\begin_inset Formula $a=3.96(3)\times10^{-3}$
+ The parameters for the exponential fit were found to be for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ : 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
 \end_inset
 
  , 
-\begin_inset Formula $b=.$
+\begin_inset Formula $b=4.54(5)\times10^{3}$
 \end_inset
 
  and the chi square is 
-\begin_inset Formula $\chi^{2}=.............$
+\begin_inset Formula $\chi_{V_{5}}^{2}=1.07$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{V_{6}}^{2}=1.03$
 \end_inset
 
 .
@@ -543,7 +551,39 @@ status open
 
 \begin_layout Plain Layout
 Fits at low and high temperature region for graphs of conductance versus
- temperature when V5 is applied and when V6 is applied.
+ temperature when 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ is applied and when 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+ is applied with 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.54(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a=4.54(5)\times10^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.48(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -574,16 +614,12 @@ Therefore the to fit equations are the inverse of the equations used to
 \end_layout
 
 \begin_layout Standard
-The parameters for the power law fit were found to be 
-\begin_inset Formula $a=.........$
+The parameters for the power law fit the chi squares were found to be 
+\begin_inset Formula $\chi_{V_{5}}^{2}=0.82$
 \end_inset
 
  and 
-\begin_inset Formula $x_{0}=...........$
-\end_inset
-
- and the chi square is 
-\begin_inset Formula $\chi^{2}=.............$
+\begin_inset Formula $\chi_{V_{6}}^{2}=0.85$
 \end_inset
 
  (
@@ -591,19 +627,31 @@ The parameters for the power law fit were found to be
 Is there a better way of stating this
 \color inherit
 ).
- The parameters for the exponential fit were found to be 
-\begin_inset Formula $a=.........$
+ The parameters for the exponential fit for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ were found to be 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
 \end_inset
 
  , 
-\begin_inset Formula $b=...........$
+\begin_inset Formula $b=4.54(5)\times10^{3}$
 \end_inset
 
- and the chi square is 
-\begin_inset Formula $\chi^{2}=.............$
+ and the chi squares are 
+\begin_inset Formula $\chi_{V_{5}}^{2}=1.07$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{V_{6}}^{2}=1.03$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+At high temperature where the conductance follows maxwell equation ....
 \end_layout
 
 \begin_layout Section
@@ -641,7 +689,31 @@ status open
 
 \begin_layout Plain Layout
 Fit at low and high temperature region for graphs of resistance versus temperatu
-re when V5 is applied and when V6 is applied.
+re when V5 is applied and when V6 is applied with 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.54(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a=4.2(5)\times10^{-4}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.48(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+.
  
 \end_layout
 
