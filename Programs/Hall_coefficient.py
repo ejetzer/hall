@@ -55,43 +55,25 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess, outfile=None):
     fct2 = lambda x: res2[0] * pylab.exp(res2[1]/x)
     pylab.clf()
     make_fig(Ts, Rs, es, a, b, c, d, fct1, fct2, outfile)
-    return fit1, fit2
+    return '', ''
 
 def make_fig(Ts, Rs, es, a, b, c, d, fct1, fct2, outfile):
     fig = pylab.figure()
     gs = gridspec.GridSpec(4, 4)
-    TR = fig.add_subplot(gs[1:, :])
-    TR.errorbar(Ts, Rs, es[0], fmt=',')
+    TR = fig.add_subplot(gs[:, :])
+    TR.errorbar(Ts, Rs, 2e-8, fmt=',')
     xs = pylab.linspace(a, b, 100)
-    TR.plot(xs, fct1(xs), '-', color='red')
+    #TR.plot(xs, fct1(xs), '-', color='red')
     xs = pylab.linspace(c, d, 100)
-    TR.plot(xs, fct2(xs), '-', color='red')
-    pylab.xlim(200, 400)
+    #TR.plot(xs, fct2(xs), '-', color='red')
+    pylab.xlim(160, 400)
+    pylab.yticks(list(pylab.linspace(-5e-4, 3.5e-4, 8)),
+        ['{:1.1f}'.format(i) for i in pylab.linspace(-5, 3.5, 8)])
+    pylab.ylim(-1e-4, 3.5e-4)
     pylab.xlabel('Temperature (K)')
-    pylab.ylabel('Hall coefficient ($\\mathrm{m}^3/\\mathrm{C}$)')
-    residual1 = fig.add_subplot(gs[0, :2])
-    xs = [x for x in Ts if a <= x <= b]
-    ys = [(y - fct1(x))/e for x, y, e in zip(Ts, Rs, es[0]) if a <= x <= b]
-    residual1.errorbar(xs, ys, 1, fmt=',', color='blue')
-    xs = pylab.linspace(a, b, 100)
-    residual1.plot(xs, [0 for x in xs], '-', color='red')
-    residual1.xaxis.tick_top()
-    pylab.xlim(a, b)
-    pylab.xticks([a, b-1])
-    pylab.yticks([])
-    pylab.ylim(-3, 3)
-    pylab.ylabel('Studentized\nresidual')
-    residual2 = fig.add_subplot(gs[0, 2:])
-    xs = [x for x in Ts if c <= x <= d]
-    ys = [(y - fct2(x))/e for x, y, e in zip(Ts, Rs, es[1]) if c <= x <= d]
-    residual2.errorbar(xs, ys, 1, fmt=',', color='blue')
-    xs = pylab.linspace(c, d, 100)
-    residual2.plot(xs, [0 for x in xs], '-', color='red')
-    residual2.xaxis.tick_top()
-    pylab.xticks([c+1, d])
-    pylab.yticks([])
-    pylab.ylim(-3, 3)
-    pylab.xlim(c, d)
+    pylab.ylabel('Hall coefficient ($10^{-4}\\,\\mathrm{m}^3/\\mathrm{C}$)')
+    room_T, nominal_R_H, nRHe = 293, 1.47e-4, 0.01e-4
+    TR.errorbar([room_T], [nominal_R_H], nRHe, fmt='.', color='green')
     if not outfile: outfile = 'Fits'
     fig.savefig('../Graphs/Hall/'+outfile+'.png')
     fig.savefig('../Graphs/Hall/'+outfile+'.pdf')
@@ -115,20 +97,6 @@ def main(data_files, a, b, c, d, pguess, eguess, perr=1, eerr=1,
     pes, ees = perr / pylab.sqrt(Ns), eerr / pylab.sqrt(Ns)
     fits = splitfit(xs, ys, (pes, ees), a, b, c, d, pguess, eguess, outfile)
     return fits
-
-def print_results(fits):
-    models = ('# Power fit', '# Exponential fit')
-    for model, fit in zip(models, fits):
-        print model
-        print
-        text = str(fit)
-        lines = text.split('\n')
-        limit = -1
-        # Only print the results
-        for index, line in enumerate(lines):
-            if 'FIT RESULTS' in line: limit = index
-            if 0 < limit <= index: print line
-        print
 
 if __name__ == '__main__':
     data_file = sys.argv[1]
