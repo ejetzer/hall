@@ -7,7 +7,7 @@ from matplotlib import gridspec
 def fit_exp(Ts, Rs, Rerr, eguess):
     'Fit an exponential function to the data'
     Rs, Rerr = pylab.array(Rs), pylab.array(Rerr)
-    model, ps = 'a * exp(b * x)', 'a,b'
+    model, ps = 'a * exp(b / x)', 'a,b'
     # Make intelligent guesses for the parameters
     a, b = eguess
     b = pylab.log(Rs[0]/Rs[1]) / ( Rs[-1] - Rs[0] )
@@ -52,7 +52,7 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     res1 = fit1.results[0]
     res2 = fit2.results[0]
     fct1 = lambda x: res1[0] * (x - res1[1])
-    fct2 = lambda x: res2[0] * pylab.exp(res2[1]*x)
+    fct2 = lambda x: res2[0] * pylab.exp(res2[1]/x)
     Rs = pylab.array(Rs)
     Ges = [[[e/R**2] for R, e in zip(Rs, es[i])] for i in range(2)]
     pylab.clf()
