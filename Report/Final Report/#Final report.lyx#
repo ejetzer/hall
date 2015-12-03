@@ -512,6 +512,56 @@ Is there a better way of stating this
 .
 \end_layout
 
+\begin_layout Standard
+The conductance now is just the inverse of the resistance 
+\begin_inset Formula $G=\frac{1}{R}\propto\frac{1}{\rho}$
+\end_inset
+
+.
+ The graph of the conductance will just appear to be the inverse of the
+ graph of the resistance versus temperature.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V5.png
+	lyxscale 50
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graphs of the conductance versus temperature when V5 is applied and when
+ V6 is applied.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Hall coefficient as a function of Temperature
 \end_layout
@@ -532,11 +582,30 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/RvsT/fit_exp.png
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V5.png
 	lyxscale 50
-	scale 70
-	rotateOrigin rightTop
+	scale 50
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -547,7 +616,133 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Exponential fit for the Resistance versus Temperature.
+Resistance versus Temperature for V5
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V6.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resistance versus Temperature for V6
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V5.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V6.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resistance versus temperature for V5 and V6
 \end_layout
 
 \end_inset
@@ -565,39 +760,6 @@ Exponential fit for the Resistance versus Temperature.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/RvsT/fit_power.png
-	lyxscale 50
-	scale 70
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Power Fit for the Resistance versus Temperature
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Newpage pagebreak
 \end_inset
 
