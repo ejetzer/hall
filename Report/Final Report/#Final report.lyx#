@@ -443,19 +443,15 @@ Reference to graph of voltages
 .
  For both V5 and V6 we fitted the graph of resistance versus temperature
  in the low temperature region with a power law equation 
-\begin_inset Formula $a\times(x-x_{0})^{3/2}+b$
+\begin_inset Formula $a\times(x-x_{0})^{3/2}$
 \end_inset
 
  , where the parameters are 
 \begin_inset Formula $a$
 \end_inset
 
-, 
+and 
 \begin_inset Formula $x_{0}$
-\end_inset
-
- , and 
-\begin_inset Formula $b$
 \end_inset
 
 .
@@ -480,11 +476,7 @@ The parameters for the power law fit were found to be
 \begin_inset Formula $a=.........$
 \end_inset
 
- , 
-\begin_inset Formula $b=...........$
-\end_inset
-
- and 
+ , and 
 \begin_inset Formula $x_{0}=...........$
 \end_inset
 
@@ -530,10 +522,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V5.png
-	lyxscale 50
-	scale 70
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs for final report/Screen Shot 2015-12-03 at 9.48.19 AM.png
+	lyxscale 40
+	scale 50
 
 \end_inset
 
@@ -544,8 +537,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Graphs of the conductance versus temperature when V5 is applied and when
- V6 is applied.
+Fits at low and high temperature region for graphs of conductance versus
+ temperature when V5 is applied and when V6 is applied.
 \end_layout
 
 \end_inset
@@ -553,13 +546,59 @@ Graphs of the conductance versus temperature when V5 is applied and when
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Therefore the to fit equations are the inverse of the equations used to
+ fit the low and high temperature region of the graphs of resistance versus
+ temperature.
+ In the low temperature region we used 
+\begin_inset Formula $\nicefrac{1}{a\times(x-x_{0})^{3/2}}$
+\end_inset
+
+ where the parameters are the same as for the resistance versus temperature
+ ones.
+ Similarly in the high temperature region 
+\begin_inset Formula $\nicefrac{1}{a\times e^{bx}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The parameters for the power law fit were found to be 
+\begin_inset Formula $a=.........$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{0}=...........$
+\end_inset
+
+ and the chi square is 
+\begin_inset Formula $\chi^{2}=.............$
+\end_inset
+
+ (
+\color magenta
+Is there a better way of stating this
+\color inherit
+).
+ The parameters for the exponential fit were found to be 
+\begin_inset Formula $a=.........$
+\end_inset
+
+ , 
+\begin_inset Formula $b=...........$
+\end_inset
+
+ and the chi square is 
+\begin_inset Formula $\chi^{2}=.............$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -575,187 +614,6 @@ Appendices
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V5.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Resistance versus Temperature for V5
-\end_layout
-
-\end_inset
-
-
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V6.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Resistance versus Temperature for V6
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V5.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset space \hfill{}
-\end_inset
-
-
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/GvsT/V6.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Resistance versus temperature for V5 and V6
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
