@@ -15,30 +15,22 @@ def fit_exp(Ts, Rs, Rerr, eguess):
     fitter = spinmob.data.fitter(model, ps)
     fitter.set_data(Ts, Rs, Rerr)
     fitter.set(a=a, b=b) # Set guesses
-    fitter.set(xlabel='Temperature (K)',
-               ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
-    pylab.savefig('../Graphs/RvsT/fit_exp.png')
-    pylab.savefig('../Graphs/RvsT/fit_exp.pdf')
     return fitter
 
 def fit_power(Ts, Rs, Rerr, pguess):
     'Fit a power function to the data'
     Rs, Rerr = pylab.array(Rs), pylab.array(Rerr)
-    model, ps = 'a * (x-x0)', 'a,x0'
+    model, ps = 'a * (x-x0)**(3/2)', 'a,x0'
     # Make intelligent guesses for the parameters
     a, x0 = pguess
     # Create a spinmob fitter
     fitter = spinmob.data.fitter(model, ps)
     fitter.set_data(Ts, Rs, Rerr)
     fitter.set(a=a, x0=x0) # Set guesses
-    fitter.set(xlabel='Temperature (K)',
-               ylabel='Resistance ($\Omega$)')
     # Fit.
     fitter.fit()
-    #pylab.savefig('../Graphs/RvsT/fit_power.png')
-    #pylab.savefig('../Graphs/RvsT/fit_power.pdf')
     return fitter
 
 def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
@@ -70,12 +62,9 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     TR.plot(xs, fct1(xs), '-', color='red')
     xs = pylab.linspace(c, d, 100)
     TR.plot(xs, fct2(xs), '-', color='red')
-    pylab.xlim(200, 390)
+    pylab.xlim(225, 400)
     pylab.xlabel('Temperature (K)')
     pylab.ylabel('Resistance ($\\Omega$)')
-    # Plot the other run
-    sw6 = spinmob.data.load('../Data/Resistance against temperature/Nov12/slow_warming.6')
-    TR.plot(sw6[0], -sw6[1]/0.001, ',', color='grey')
     residual1 = fig.add_subplot(gs[0, :2])
     xs = [x for x in Ts if a <= x <= b]
     ys = [(y - fct1(x))/e for x, y, e in zip(Ts, Rs, es[0]) if a <= x <= b]
@@ -84,9 +73,10 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     residual1.plot(xs, [0 for x in xs], '-', color='red')
     residual1.xaxis.tick_top()
     pylab.xlim(a, b)
-    pylab.xticks([a+1, b-1])
-    #pylab.ylim(-1, 1)
-    pylab.ylabel('Residual')
+    pylab.xticks([a, b-1])
+    pylab.yticks([])
+    pylab.ylim(-3, 3)
+    pylab.ylabel('Studentized\nresidual')
     residual2 = fig.add_subplot(gs[0, 2:])
     xs = [x for x in Ts if c <= x <= d]
     ys = [(y - fct2(x))/e for x, y, e in zip(Ts, Rs, es[1]) if c <= x <= d]
@@ -94,9 +84,9 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     xs = pylab.linspace(c, d, 100)
     residual2.plot(xs, [0 for x in xs], '-', color='red')
     residual2.xaxis.tick_top()
-    pylab.xticks([c+1, d-1])
-    #pylab.ylim(-1, 1)
-    residual2.yaxis.tick_right()
+    pylab.xticks([c+1, d])
+    pylab.yticks([])
+    pylab.ylim(-3, 3)
     pylab.xlim(c, d)
     fig.savefig('../Graphs/Fits.png')
     fig.savefig('../Graphs/Fits.pdf')
@@ -122,9 +112,16 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     pylab.savefig('../Graphs/Fits_exp.pdf')
     return fit1, fit2
 
-def main(data_file, a, b, c, d, pguess, eguess, perr=1, eerr=1):
-    databox = spinmob.data.load(data_file)
-    xs, ys, es, Ns = databox[:4]
+def main(data_files, a, b, c, d, pguess, eguess, perr=1, eerr=1):
+    xs, ys, es, Ns = [], [], [], []
+    for df in data_files:
+        databox = spinmob.data.load(df)
+        x, y, e, N = databox[:4]
+        xs += list(x)
+        ys += [abs(i) for i in y]
+        es += list(e)
+        Ns += list(N)
+    xs, ys, es, Ns = pylab.array(xs), pylab.array(ys), pylab.array(es), pylab.array(Ns)
     pes, ees = perr / pylab.sqrt(Ns), eerr / pylab.sqrt(Ns)
     if 'current' in databox.hkeys:
         current = databox.h('current')
