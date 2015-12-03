@@ -33,7 +33,7 @@ def fit_power(Ts, Rs, Rerr, pguess):
     fitter.fit()
     return fitter
 
-def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
+def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess, outfile=None):
     ## Split the data in two parts
     x1, x2, y1, y2, e1, e2 = [], [], [], [], [], []
     for T, R, pe, ee in zip(Ts, Rs, es[0], es[1]):
@@ -56,6 +56,10 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     Rs = pylab.array(Rs)
     Ges = [[[e/R**2] for R, e in zip(Rs, es[i])] for i in range(2)]
     pylab.clf()
+    make_fig(Ts, Rs, Ges, a, b, c, d, fct1, fct2, outfile)
+    return fit1, fit2
+
+def make_fig(Ts, Rs, Ges, a, b, c, d, fct1, fct2, outfile=None):
     fig = pylab.figure()
     gs = gridspec.GridSpec(4, 4)
     TR = fig.add_subplot(gs[1:, :])
@@ -91,11 +95,11 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess):
     pylab.yticks([])
     pylab.ylim(-3, 3)
     pylab.xlim(c, d)
-    fig.savefig('../Graphs/Fits.png')
-    fig.savefig('../Graphs/Fits.pdf')
-    return fit1, fit2
+    if not outfile: outfile = 'Fits'
+    fig.savefig('../Graphs/GvsT/'+outfile+'.png')
+    fig.savefig('../Graphs/GvsT/'+outfile+'.pdf')
 
-def main(data_files, a, b, c, d, pguess, eguess, perr=1, eerr=1):
+def main(data_files, a, b, c, d, pguess, eguess, perr=1, eerr=1, outfile=None):
     xs, ys, es, Ns = [], [], [], []
     for df in data_files:
         databox = spinmob.data.load(df)
@@ -113,7 +117,7 @@ def main(data_files, a, b, c, d, pguess, eguess, perr=1, eerr=1):
         databox.h(current=current)
     Rs = ys / current
     Rerrs = pes / current, ees / current
-    fits = splitfit(xs, Rs, Rerrs, a, b, c, d, pguess, eguess)
+    fits = splitfit(xs, Rs, Rerrs, a, b, c, d, pguess, eguess, outfile)
     return fits
 
 def print_results(fits):

@@ -6,7 +6,8 @@ import spinmob, glob, sys, matplotlib.pylab as pylab
 def simple_plot(data_file, title=None, fct=lambda x: x,
                 ylabel='Potential (V)',
                 xlabel='Temperature (K)',
-                xmin=None, xmax=None):
+                xmin=None, xmax=None,
+                outfile=None):
     if not isinstance(data_file, list): data_file = [data_file]
     for df in data_file:
         databox = spinmob.data.load(df)
@@ -19,8 +20,9 @@ def simple_plot(data_file, title=None, fct=lambda x: x,
     if title: pylab.title(title)
     pylab.xlabel(xlabel)
     pylab.ylabel(ylabel)
-    pylab.savefig('../Graphs/Simple plots/' + data_file[0].split('/')[-1] + '.png')
-    pylab.savefig('../Graphs/Simple plots/' + data_file[0].split('/')[-1] + '.pdf')
+    if not outfile: outfile = data_file[0].split('/')[-1]
+    pylab.savefig('../Graphs/Simple plots/' + outfile + '.png')
+    pylab.savefig('../Graphs/Simple plots/' + outfile + '.pdf')
     pylab.clf()
 
 if __name__ == '__main__':
