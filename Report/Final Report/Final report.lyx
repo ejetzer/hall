@@ -559,7 +559,7 @@ Fits at low and high temperature region for graphs of conductance versus
 \begin_inset Formula $V_{6}$
 \end_inset
 
- is applied with 
+ is applied with the parameters of the exponential fit 
 \begin_inset Formula $a=2.5(3)\times10^{-4}$
 \end_inset
 
@@ -651,7 +651,41 @@ Is there a better way of stating this
 \end_layout
 
 \begin_layout Standard
-At high temperature where the conductance follows maxwell equation ....
+At high temperature where the conductance follows maxwell equation 
+\begin_inset Formula $G\propto e^{\frac{E_{g}}{2kT}}$
+\end_inset
+
+, where 
+\begin_inset Formula $E_{g}$
+\end_inset
+
+ is the band gap energy.
+ In order to find its value we use the fit of the Conductance versus temperature
+ graph in the high temperature region where the fit is exponential 
+\begin_inset Formula $\nicefrac{1}{a\times e^{bx}}\propto e^{-bx}$
+\end_inset
+
+.
+ Comparing the two equation we can see that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{g}=-b\times2kT=4.88(propagationerror)\times10^{-17}$
+\end_inset
+
+, (
+\color magenta
+what Temperature to use ? 390
+\color inherit
+ ) where 
+\begin_inset Formula $b=4.54(5)\times10^{3}$
+\end_inset
+
+ is the parameter found with the fit equation for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section

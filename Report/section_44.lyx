@@ -1,0 +1,701 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[pagebackref]{hyperref}
+
+\renewcommand\[{\begin{equation}}
+\renewcommand\]{\end{equation}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style IEEEtran
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Section 4.4: Measurement of the Magneto-Resistance as a Function of the Magnetic
+ Field Intensity
+\end_layout
+
+\begin_layout Quotation
+\noindent
+\align center
+aaaaaaaaaaaaa
+\end_layout
+
+\begin_layout Quotation
+\noindent
+\align center
+aaaaaaaaaaaaa
+\end_layout
+
+\begin_layout Quotation
+\noindent
+\align center
+aaaaaaaaaaaaaaa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can write a section intro here.
+\end_layout
+
+\begin_layout Paragraph*
+Basics
+\end_layout
+
+\begin_layout Itemize
+In order to specify whether what you're typing is standard text, a title,
+ section title, enumerated list, etc, use the pull-down menu in the upper
+ left.
+\end_layout
+
+\begin_layout Itemize
+To compile and view the document, push the googly eyes in the upper left.
+\end_layout
+
+\begin_layout Standard
+Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Equations"
+
+\end_inset
+
+ below shows a demo of a subsection.
+ In order to create the section reference in the previous sentence, I first
+ manually inserted a 
+\begin_inset Quotes eld
+\end_inset
+
+label
+\begin_inset Quotes erd
+\end_inset
+
+ (Insert
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Label) next to the section's title below, which allows me to (anywhere in
+ the document!) insert the reference (Insert
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Reference) to the section.
+ LyX will keep track of all the numbers and stuff for you as the document
+ changes.
+\end_layout
+
+\begin_layout Subsection
+Test subsection with equations
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Equations"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can write a subsection intro here.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Figure"
+
+\end_inset
+
+ below shows a demo of a subsubsection.
+ You can include 
+\begin_inset Formula $ma_{t}\hbar=iN_{li}n_{e}$
+\end_inset
+
+ by pressing 
+\begin_inset Quotes eld
+\end_inset
+
+ctrl-m
+\begin_inset Quotes erd
+\end_inset
+
+, or bigger equations
+\begin_inset Formula 
+\begin{equation}
+ax^{2}+bx+c=0\label{eq:myequation}
+\end{equation}
+
+\end_inset
+
+by typing pressing 
+\begin_inset Quotes eld
+\end_inset
+
+ctrl-shift-m
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Note in eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:myequation"
+
+\end_inset
+
+, I have inserted a label, so that I can reference it as in this sentence.
+ All the stuff before and including this sentence, with the exception of
+ the title at the top, is garbage that is not to be included in the report.
+\end_layout
+
+\begin_layout Section
+Measurement of the Magneto-Resistance as a Function of the Magnetic Field
+ Intensity
+\end_layout
+
+\begin_layout Standard
+In this section, we seek to determine how the resistance of the germanium
+ sample is affected by the magnetic field.
+ The resistance of the germanium sample is expected to change in the presence
+ of a magnetic field because the magnetic force shifts electrical charges
+ inside the sample.
+ This affects the charge density, which is not uniform anymore, and this,
+ in turn, affects the resistance.
+ The difference between the resistivity in the presence of a magnetic field,
+ 
+\begin_inset Formula $\rho$
+\end_inset
+
+, and without a field, 
+\begin_inset Formula $\rho_{0}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula $\Delta\rho\equiv\rho-\rho_{0}$
+\end_inset
+
+.
+ For large values of 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta\rho$
+\end_inset
+
+ is expected to have a quadratic dependence on 
+\begin_inset Formula $B$
+\end_inset
+
+:
+\color yellow
+(PUT A BIBLIOGRAPHICAL REFERENCE TO THE OXFORD DOCUMENT HERE)
+\color inherit
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Delta\rho\varpropto B^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+.
+ Then, 
+\begin_inset Formula $K(R-R_{0})=CB^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $R-R_{0\text{}}=CB^{2}$
+\end_inset
+
+ (
+\begin_inset Formula $K$
+\end_inset
+
+ is absorbed in 
+\begin_inset Formula $C$
+\end_inset
+
+), and 
+\begin_inset Formula $R=CB^{2}+R_{0}$
+\end_inset
+
+.
+ Thus, the resistance 
+\begin_inset Formula $R$
+\end_inset
+
+ is expected to follow a functional form 
+\begin_inset Formula $R=C\cdotp B^{2}+D$
+\end_inset
+
+, where 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ are constants.
+ 
+\end_layout
+
+\begin_layout Standard
+We put the sample inside the magnet.
+ There is a constant current of 1 mA passing through the sample.
+ There is a second current, which we set with the current power supply,
+ to power the electromagnet and create a magnetic field.
+ Thus, the magnetic field remains constant.
+ In other words, setting the current at some value is an indirect way to
+ create a constant magnetic field.
+ Then, we take 3 measurements: the potential of the Hall probe, and the
+ two potentials
+\begin_inset Formula $V{}_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $V{}_{6}$
+\end_inset
+
+.
+ They don't change over time, but we still take several successive measurements
+ of each, because of random fluctuations, and compute the average and standard
+ deviation to obtain definite values.
+ We then set the current to a slightly higher value (the current inside
+ the sample always remains at 1 mA) and take new measurements.
+ We tested a range of values from 1.7 mA to 17 mA.
+ To compute the resistance 
+\begin_inset Formula $R$
+\end_inset
+
+, we divide 
+\begin_inset Formula $V{}_{5}$
+\end_inset
+
+ (mesured) by the constant current of 1 mA.
+ To compute the magnetic field 
+\begin_inset Formula $B$
+\end_inset
+
+, we know that it depends on the potential 
+\begin_inset Formula $V_{probe}$
+\end_inset
+
+ of the Hall probe in the functional form 
+\begin_inset Formula $B=\gamma+\delta\cdotp V_{probe}$
+\end_inset
+
+.
+ For our probe, we are given the values 
+\begin_inset Formula $\gamma=9.62$
+\end_inset
+
+ mT, and 
+\begin_inset Formula $\delta=1.8949$
+\end_inset
+
+ mT/mV.
+ Thus, with 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{probe}$
+\end_inset
+
+, we can find the resistance 
+\begin_inset Formula $R$
+\end_inset
+
+ and the magnetic field 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The plot of the 
+\begin_inset Formula $R$
+\end_inset
+
+ against 
+\begin_inset Formula $B$
+\end_inset
+
+ is displayed in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:magneto-resistance"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Resistance_vs_magneticfield.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:magneto-resistance"
+
+\end_inset
+
+The resistance (in k
+\begin_inset Formula $\Omega$
+\end_inset
+
+) against the magnetic field (in mT) of the germanium sample.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ steadily increases along with 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We used a fit of the form 
+\begin_inset Formula $R=a(B-B_{0})^{2}+b$
+\end_inset
+
+, where 
+\begin_inset Formula $B_{0}$
+\end_inset
+
+ is a constant.
+ The parameter values and 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ are written in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:magneto-resistance"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+ (k
+\begin_inset Formula $\Omega$
+\end_inset
+
+/mT)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(8.64
+\begin_inset Formula $\pm$
+\end_inset
+
+17.07)
+\begin_inset Formula $\times10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{0}$
+\end_inset
+
+ (mT)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-314
+\begin_inset Formula $\pm$
+\end_inset
+
+1194
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+ (k
+\begin_inset Formula $\Omega$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65.25
+\begin_inset Formula $\pm$
+\end_inset
+
+5.95
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0022
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:magneto-resistance"
+
+\end_inset
+
+The parameter values of the fit for the magneto-resistance.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
