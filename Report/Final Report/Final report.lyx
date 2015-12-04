@@ -1223,6 +1223,10 @@ The parameter values of the fit for the magneto-resistance.
 Appendices 
 \end_layout
 
+\begin_layout Subsection
+Graphs 
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -1289,10 +1293,64 @@ re when V5 is applied and when V6 is applied with
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/image.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagram of the useful voltages to find in the experiment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+References
+\end_layout
+
 \begin_layout Standard
+Wikipedia, Maxwell distribution, https://en.wikipedia.org/wiki/Maxwell%E2%80%93Bol
+tzmann_distribution
+\end_layout
+
+\begin_layout Standard
+Wikipedia, Mean free pass, https://en.wikipedia.org/wiki/Mean_free_path#cite_note-
+9
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Wiki
 \begin_inset Newpage pagebreak
 \end_inset
 
