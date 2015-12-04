@@ -164,8 +164,7 @@ In order to analyze this characteristics we need to understand the theory
  In semiconductors, the energy band gap is much smaller and the majority
  of the electrons will be in the valence band but some will reach the conduction
  band and be charge carriers.
- The resistance of semiconductors like germanium is dependent on temperature.
- Indeed when negative carriers with density 
+ For carriers that are negatives with density 
 \begin_inset Formula $n$
 \end_inset
 

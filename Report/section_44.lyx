@@ -445,14 +445,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename Resistance_vs_magneticfield.jpg
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
+graph of resistance vs magnetic field
 \end_layout
 
 \begin_layout Plain Layout
