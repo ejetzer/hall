@@ -198,10 +198,37 @@ In order to analyze this characteristics we need to understand the theory
 can refer to Griffiths
 \color inherit
 ).
- From statistical mechanics it can be shown that average velocity of a particle
- is .......
- For semiconductors it can be shown that the mean velocity is approximately
- equal to 
+ From Maxwell distribution theory (
+\color magenta
+refer to references
+\color inherit
+) the mean velocity 
+\begin_inset Formula $\textbf{v}$
+\end_inset
+
+(
+\color magenta
+refer to maxwell distribution reference
+\color inherit
+ ), the mean free path 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ (
+\color magenta
+refer to mean free path reference
+\color inherit
+) can be defined and we observe that 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ goes like 
+\begin_inset Formula $\nicefrac{1}{kT}$
+\end_inset
+
+.
+ Combining those results, for semiconductors, it can be shown that the mean
+ velocity 
 \begin_inset Formula $\textbf{v}\approx\frac{e\lambda\textbf{E}}{2\sqrt{3kTm}}$
 \end_inset
 
@@ -236,14 +263,7 @@ can refer to Griffiths
 \end_inset
 
 .
- (
-\color magenta
-how can I get more precise without taking to much spac
-\color cyan
-e
-\color inherit
-) However equation this equation is valid only if the number of carriers
- remains constant.
+ However this equation is valid only if the number of carriers remains constant.
  .
  At higher temperatures, we reach the limit where the carrier density varies
  with temperature.
@@ -253,25 +273,11 @@ e
 \end_inset
 
 .
- To conduct an experiment that would show this result we use a sample of
- germanium (
-\color red
-Figure ....
+ In (
+\color magenta
+section 3
 \color inherit
-) connected to a thermocouple that measures the temperature of the crystal.
- The sample is cooled down with liquid nitrogen to approximately 150K.
- The temperature increase to room temperature and then a Dc power supply
- is used to power a heated connected to the sample to increase the temperature
- up to 383K.
- During the entire process a current source supply a constant current of
- 1mA to the crystal allowing us to measure different voltages (
-\color red
-Figure ......
-\color inherit
-).
- A digital multimeter (DMM) reads the different voltages of interest for
- the experiment and reads the temperature and current through the sample.
- These values are displayed on the apparatus and can be seen on a computer.
+) we conduct an experiment that shows this result.
  
 \end_layout
 
@@ -422,6 +428,38 @@ Potential error
 
 \begin_layout Section
 Function of conductance against temperature 
+\end_layout
+
+\begin_layout Standard
+An experiment can be done to show the evolution of the resistance 
+\begin_inset Formula $R$
+\end_inset
+
+ of a sample crystal when the temperature of the sample varies as discussed
+ in the introduction(
+\color magenta
+reference
+\color inherit
+).
+ We use a sample of germanium (
+\color red
+Figure ....
+\color inherit
+) connected to a thermocouple that measures the temperature of the crystal.
+ The sample is cooled down with liquid nitrogen to approximately 150K.
+ The temperature increases to room temperature and then a DC power supply
+ is used to power a heater connected to the sample to increase the temperature
+ up to 383K.
+ During the entire process a current source supply a constant current of
+ 1mA to the crystal allowing us to measure different voltages (
+\color red
+Figure ......
+\color inherit
+).
+ A digital multimeter (DMM) reads the different voltages of interest for
+ the experiment and reads the temperature and current through the sample.
+ These values are displayed on the apparatus and can be seen on a computer.
+ 
 \end_layout
 
 \begin_layout Standard
