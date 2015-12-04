@@ -1,0 +1,767 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[pagebackref]{hyperref}
+
+\renewcommand\[{\begin{equation}}
+\renewcommand\]{\end{equation}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing other 1.5
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The Hall Effect and Properties of Semiconductors
+\end_layout
+
+\begin_layout Quotation
+\noindent
+\align center
+Emile JETZER
+\end_layout
+
+\begin_layout Quotation
+\noindent
+\align center
+Nicolas CHOUX, 
+\end_layout
+
+\begin_layout Quotation
+\noindent
+\align center
+David BOREL,
+\end_layout
+
+\begin_layout Quotation
+\noindent
+\align center
+McGill University
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+I........
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Some very interesting characteristics of crystals can be analyzed experimentally.
+ Such characteristics are the resistivity of a crystal as a function of
+ temperature, the hall voltage (this potential difference created by the
+ separation of charges in the crystal when a magnetic field is applied on
+ the crystal) as a function of temperature and how the intensity of the
+ magnetic field affects the resistance of the crystal.
+ In this experiment we will choose the germanium semiconductor as our crystal
+ to analyze.
+ 
+\end_layout
+
+\begin_layout Standard
+In order to do analyze this characteristics we need to understand the theory
+ behind them.
+ The resistance of semiconductors like germanium is dependent on temperature.
+ Indeed when negative carriers with density 
+\begin_inset Formula $n$
+\end_inset
+
+ and charge 
+\begin_inset Formula $e$
+\end_inset
+
+for each charge, the current density 
+\begin_inset Formula $\textbf{J}$
+\end_inset
+
+ relates to the mean velocity 
+\begin_inset Formula $\textbf{v}$
+\end_inset
+
+ of the charge carriers by : 
+\begin_inset Formula $\textbf{J}=en\textbf{v}$
+\end_inset
+
+.
+ It also relates to the conductivity 
+\begin_inset Formula $\sigma=\nicefrac{1}{\rho}$
+\end_inset
+
+ by the equation 
+\begin_inset Formula $\textbf{J}=\sigma\textbf{E}$
+\end_inset
+
+.
+ For semiconductors it can be shown that the mean velocity is approximately
+ equal to 
+\begin_inset Formula $\textbf{v}\approx\frac{e\lambda\textbf{E}}{2\sqrt{3kTm}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the mean free path of the carriers, k is he Boltzmann constant, T is
+ the temperature of the sample and 
+\begin_inset Formula $m$
+\end_inset
+
+ is the effective carrier mass.
+ Using this relation and the fact that 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ goes like 
+\begin_inset Formula $\nicefrac{1}{kT}$
+\end_inset
+
+ we find that the resistance
+\begin_inset Formula $R$
+\end_inset
+
+ is related to the temperature 
+\begin_inset Formula $T$
+\end_inset
+
+ in a way that 
+\begin_inset Formula $R\propto T^{b}$
+\end_inset
+
+.
+ (
+\color magenta
+how can I get more precise without taking to much spac
+\color cyan
+e
+\color inherit
+) However equation this equation is valid only if the number of carriers
+ remains constant.
+ The electrons in the semiconductor have access to different levels of energy.
+ In semiconductors, these levels are grouped in bands: The Conduction Band
+ and the Valence Band.
+ For insulators electrons are in the Valence Band, the energy gap between
+ Conduction and Valence Band is large and leaves no possibility for electrons
+ to move around.
+ In semiconductors, the energy band gap is much smaller and the majority
+ of the electrons will be in the valence band but some will reach the conduction
+ band and be charge carriers.
+ At higher temperatures, we reach the limit where the carrier density varies
+ with temperature.
+ In this case the conductivity follows Maxwell distribution with an exponential
+ 
+\begin_inset Formula $R\propto e^{\nicefrac{a}{T}}$
+\end_inset
+
+.
+ To conduct an experiment that would show this result we use a sample of
+ germanium (
+\color red
+Figure ....
+\color inherit
+) connected to a thermocouple that measures the temperature of the crystal.
+ The sample is cooled down with liquid nitrogen to approximately 150K.
+ The temperature increase to room temperature and then a Dc power supply
+ is used to power a heated connected to the sample to increase the temperature
+ up to 383K.
+ During the entire process a current source supply a constant current of
+ 1mA to the crystal allowing us to measure different voltages (
+\color red
+Figure ......
+\color inherit
+).
+ A digital multimeter (DMM) reads the different voltages of interest for
+ the experiment and reads the temperature and current through the sample.
+ These values are displayed on the apparatus and can be seen on a computer.
+ 
+\end_layout
+
+\begin_layout Standard
+Before introducing next characteristic we are interested in the experiment,
+ a common physical quantity, the mobility 
+\begin_inset Formula $\mu$
+\end_inset
+
+ of the charge carriers, is defined as 
+\begin_inset Formula $\mu=\frac{\textbf{v}}{\textbf{E}}=\frac{\sigma}{ne}$
+\end_inset
+
+.
+ When a magnetic field is applied while current is driven through the sample,
+ a force is induced separating the carriers in such a way that a potential
+ difference is created across the sides of the sample.
+ This potential is called the Hall Voltage 
+\begin_inset Formula $V_{H}$
+\end_inset
+
+.
+ This effect can also be quantified by the Hall coefficient defined to be
+ 
+\begin_inset Formula $R_{H}=\frac{E_{y}}{J_{x}B}=\frac{V_{H}d}{IB}=\frac{1}{ne}$
+\end_inset
+
+, where
+\begin_inset Formula $E_{y}$
+\end_inset
+
+ is the magnitude of the electric field created by the charge pile-up ,
+ 
+\begin_inset Formula $J_{x}$
+\end_inset
+
+is the current density in the sample, B is the magnitude of the magnetic
+ field and d is the thickness of the sample (for a rectangle model perpendicular
+ to the field).
+ Another way to quantify the effect is the Hall angle 
+\begin_inset Formula $\phi_{H}=\frac{V_{y}}{V_{x}}=\frac{E_{y}w}{E_{x}l}=\frac{w}{l}\mu_{H}B$
+\end_inset
+
+, where 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+ is the Hall voltage drop across a width 
+\begin_inset Formula $w$
+\end_inset
+
+ on the sample, and 
+\begin_inset Formula $V_{y}$
+\end_inset
+
+ is the voltage drop across a length 
+\begin_inset Formula $l$
+\end_inset
+
+ on the sample.
+ 
+\begin_inset Formula $E_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{y}$
+\end_inset
+
+ are the corresponding electric fields and 
+\begin_inset Formula $\mu_{H}$
+\end_inset
+
+ corresponds to the mobility.
+ 
+\end_layout
+
+\begin_layout Standard
+In a semiconductor the charge carriers can be negative carriers (carrier
+ density 
+\begin_inset Formula $n$
+\end_inset
+
+) or positive carriers (carrier density 
+\begin_inset Formula $p$
+\end_inset
+
+).
+ The force induced by the magnetic field, thus, push them in opposite direction
+ along a 
+\begin_inset Formula $y$
+\end_inset
+
+direction according to the sign of the carriers.
+ Realizing that the net current must be zero and using the previous definition
+ we can obtain an equation for the Hall coefficient in terms of the mobilities
+ and the carriers densities: 
+\begin_inset Formula 
+\[
+R_{H}=\frac{\mu_{+}^{2}p-\mu_{-}^{2}n}{e(\mu_{+}p-\mu_{-}n)}
+\]
+
+\end_inset
+
+These mobilities very with temperature.
+ When 
+\begin_inset Formula $p>n$
+\end_inset
+
+ we expect 
+\begin_inset Formula $R_{H}$
+\end_inset
+
+ to change sign at some temperature (as 
+\begin_inset Formula $p$
+\end_inset
+
+increases and 
+\begin_inset Formula $n$
+\end_inset
+
+ decreases with increasing temperature).
+ Such semiconductors are said to be 
+\begin_inset Formula $p-type$
+\end_inset
+
+.
+ Semiconductors which has 
+\begin_inset Formula $n>p$
+\end_inset
+
+ are said to be 
+\begin_inset Formula $n-type$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Potential error
+\end_layout
+
+\begin_layout Section
+Function of conductance against temperature 
+\end_layout
+
+\begin_layout Standard
+A graph of resistance against temperature was done when the voltage V5 (
+\color red
+Reference to graph of voltages
+\color inherit
+ ) is applied to the sample and another one when the voltage V6 is applied
+ 
+\color red
+(Refer to graph in the appendix
+\color inherit
+).
+ At low temperature when the conduction is mainly due to extrinsic process
+ the number of carriers is constant and we expect it to follow a power law
+ 
+\begin_inset Formula $R\propto T^{b}$
+\end_inset
+
+ (as discussed in the introduction).
+ At high temperature, the carrier density varies with temperature and the
+ electrical conductivity follow Maxwell distribution 
+\begin_inset Formula $R\propto e^{\nicefrac{a}{T}}$
+\end_inset
+
+.
+ For both V5 and V6 we fitted the graph of resistance versus temperature
+ in the low temperature region with a power law equation 
+\begin_inset Formula $a\times(x-x_{0})^{3/2}$
+\end_inset
+
+ , where the parameters are 
+\begin_inset Formula $a$
+\end_inset
+
+and 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ (the value of these parameters are not relevant for the rest of the experiment
+ so we will just report the chi square).
+ Also we fitted the graph in a high temperature region with a exponential
+ decay equation 
+\begin_inset Formula $a\times e^{bx}$
+\end_inset
+
+, where the parameters are 
+\begin_inset Formula $a$
+\end_inset
+
+and 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The chi square for the power fit was found to be 
+\begin_inset Formula $\chi_{V_{5}}^{2}=0.82$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{V6}^{2}=0.85$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+ (
+\color magenta
+Is there a better way of stating this
+\color inherit
+).
+ The parameters for the exponential fit were found to be for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ : 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
+\end_inset
+
+ , 
+\begin_inset Formula $b=4.54(5)\times10^{3}$
+\end_inset
+
+ and the chi square is 
+\begin_inset Formula $\chi_{V_{5}}^{2}=1.07$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{V_{6}}^{2}=1.03$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The conductance now is just the inverse of the resistance 
+\begin_inset Formula $G=\frac{1}{R}\propto\frac{1}{\rho}$
+\end_inset
+
+.
+ The graph of the conductance will just appear to be the inverse of the
+ graph of the resistance versus temperature.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs for final report/GvsT.png
+	lyxscale 40
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fits at low and high temperature region for graphs of conductance versus
+ temperature when 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ is applied and when 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+ is applied with 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.54(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a=4.54(5)\times10^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.48(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore the to fit equations are the inverse of the equations used to
+ fit the low and high temperature region of the graphs of resistance versus
+ temperature.
+ In the low temperature region we used 
+\begin_inset Formula $\nicefrac{1}{a\times(x-x_{0})^{3/2}}$
+\end_inset
+
+ where the parameters are the same as for the resistance versus temperature
+ ones.
+ Similarly in the high temperature region 
+\begin_inset Formula $\nicefrac{1}{a\times e^{bx}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The parameters for the power law fit the chi squares were found to be 
+\begin_inset Formula $\chi_{V_{5}}^{2}=0.82$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{V_{6}}^{2}=0.85$
+\end_inset
+
+ (
+\color magenta
+Is there a better way of stating this
+\color inherit
+).
+ The parameters for the exponential fit for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ were found to be 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
+\end_inset
+
+ , 
+\begin_inset Formula $b=4.54(5)\times10^{3}$
+\end_inset
+
+ and the chi squares are 
+\begin_inset Formula $\chi_{V_{5}}^{2}=1.07$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{V_{6}}^{2}=1.03$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+At high temperature where the conductance follows maxwell equation 
+\begin_inset Formula $G\propto e^{\frac{E_{g}}{2kT}}$
+\end_inset
+
+, where 
+\begin_inset Formula $E_{g}$
+\end_inset
+
+ is the band gap energy.
+ In order to find its value we use the fit of the Conductance versus temperature
+ graph in the high temperature region where the fit is exponential 
+\end_layout
+
+\begin_layout Section
+Hall coefficient as a function of Temperature
+\end_layout
+
+\begin_layout Section
+Magneto-resistance against magnetic field intensity
+\end_layout
+
+\begin_layout Section
+Appendices 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs for final report/RvsT.png
+	lyxscale 40
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit at low and high temperature region for graphs of resistance versus temperatu
+re when V5 is applied and when V6 is applied with 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.54(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a=4.2(5)\times10^{-4}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.48(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "MyBibliography"
+options "IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
