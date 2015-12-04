@@ -158,7 +158,7 @@ In order to analyze this characteristics we need to understand the theory
  In semiconductors, these levels are grouped in bands: The Conduction Band
  and the Valence Band.
  The seperation between them is the energy gap.
- For insulators electrons are in the Valence Band, the energy gap between
+ For insulators, electrons are in the Valence Band, the energy gap between
  Conduction and Valence Band is large and leaves no possibility for electrons
  to move around.
  In semiconductors, the energy band gap is much smaller and the majority
@@ -210,7 +210,7 @@ refer to references
 \color magenta
 refer to maxwell distribution reference
 \color inherit
- ), the mean free path 
+ ) and the mean free path 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -258,21 +258,49 @@ refer to mean free path reference
 \begin_inset Formula $T$
 \end_inset
 
- in a way that 
-\begin_inset Formula $R\propto T^{b}$
+ with:
+\begin_inset Formula 
+\[
+R\propto T^{b}\rightarrow G\propto T^{-3/2}
+\]
+
 \end_inset
 
-.
+
+\end_layout
+
+\begin_layout Standard
+This is the extrinsic conduction.
  However this equation is valid only if the number of carriers remains constant.
- .
  At higher temperatures, we reach the limit where the carrier density varies
  with temperature.
- In this case the conductivity follows Maxwell distribution with an exponential
- 
-\begin_inset Formula $R\propto e^{\nicefrac{a}{T}}$
+ In this case the conductivity follows Maxwell distribution:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R\propto e^{\nicefrac{a}{T}}\rightarrow G\propto e^{\nicefrac{Eg}{2kT}},
+\]
+
 \end_inset
 
-.
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $E_{g}$
+\end_inset
+
+ is the band-gap energy.
+ 
+\end_layout
+
+\begin_layout Standard
+This is the intrinsic conduction.
+ The conductance increases as electrons are able to reach the conduction
+ band.
  In (
 \color magenta
 section 3

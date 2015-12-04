@@ -447,7 +447,7 @@ Figure ....
 \color inherit
 ) connected to a thermocouple that measures the temperature of the crystal.
  The sample is cooled down with liquid nitrogen to approximately 150K.
- The temperature increase to room temperature and then a DC power supply
+ The temperature increases to room temperature and then a DC power supply
  is used to power a heater connected to the sample to increase the temperature
  up to 383K.
  During the entire process a current source supply a constant current of
