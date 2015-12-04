@@ -364,7 +364,7 @@ is the current density in the sample, B is the magnitude of the magnetic
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -869,7 +869,118 @@ Hall mobility
 \end_layout
 
 \begin_layout Standard
-The mobility is defined 
+The mobility 
+\begin_inset Formula $\mu$
+\end_inset
+
+of the charge carriers is defined as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mu=\frac{\textbf{v}}{\textbf{E}}=\frac{\sigma}{ne},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is the conductivity, 
+\begin_inset Formula $n$
+\end_inset
+
+ is the negative carrier density and 
+\begin_inset Formula $e$
+\end_inset
+
+is the charge of the electron.
+ 
+\end_layout
+
+\begin_layout Standard
+The electron mobility characterizes how quickly an electron can move through
+ a semiconductor it's pulled by an electric field.
+ 
+\end_layout
+
+\begin_layout Standard
+The Hall angle 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is defined to be: 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\phi_{H}=\frac{V_{y}}{V_{x}}=\frac{E_{y}w}{E_{x}l}=\frac{w}{l}\mu_{H}B,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ is the Hall voltage drop across a width 
+\begin_inset Formula $w$
+\end_inset
+
+ on the sample, and 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ is the voltage drop across a length 
+\begin_inset Formula $l$
+\end_inset
+
+ on the sample (
+\color magenta
+refer to the diagram in appendix maybe
+\color inherit
+).
+ 
+\begin_inset Formula $E_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{y}$
+\end_inset
+
+ are the corresponding electric fields and 
+\begin_inset Formula $\mu_{H}$
+\end_inset
+
+ corresponds to the mobility defined above.
+ Using (reference to equation Hall angle) we can find the evolution of 
+\begin_inset Formula $\mu$
+\end_inset
+
+as a function of temperature 
+\begin_inset Formula $T$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
