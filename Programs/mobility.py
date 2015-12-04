@@ -3,6 +3,7 @@
 
 import spinmob, glob, sys, matplotlib.pylab as pylab, scipy
 from matplotlib import gridspec
+import scipy, scipy.interpolate
 
 def fit_exp(Ts, Rs, Rerr, eguess):
     'Fit an exponential function to the data'
@@ -57,51 +58,63 @@ def splitfit(Ts, Rs, es, a, b, c, d, pguess, eguess, outfile=None):
     make_fig(Ts, Rs, es, a, b, c, d, fct1, fct2, outfile)
     return '', ''
 
-def make_fig(Ts, Rs, es, a, b, c, d, fct1, fct2, outfile):
+def make_fig(Ts, Rs, es, outfile):
     fig = pylab.figure()
     gs = gridspec.GridSpec(4, 4)
     TR = fig.add_subplot(gs[:, :])
     TR.errorbar(Ts, Rs, es, fmt=',', color='blue')
     #TR.plot(Ts, Rs, '.', color='blue')
-    xs = pylab.linspace(a, b, 100)
-    xs = pylab.linspace(c, d, 100)
-    pylab.xlim(160, 400)
-    pylab.yticks(list(pylab.linspace(0, 25e-2, 6)),
-        ['{:.0f}'.format(i) for i in pylab.linspace(0, 25, 6)])
+    pylab.xlim(200, 400)
+    #pylab.yticks(list(pylab.linspace(0, 25e-2, 6)),
+    #    ['{:.0f}'.format(i) for i in pylab.linspace(0, 25, 6)])
     #pylab.ylim(0, 2e-1)
     pylab.xlabel('Temperature (K)')
-    pylab.ylabel('Hall coefficient ($10^{-2}\\,\\mathrm{m}^3/\\mathrm{C}$)')
-    #room_T, nominal_R_H, nRHe = 293, 1.47e-2*5e-3/1e-3, 1e-4
-    #TR.errorbar([room_T], [nominal_R_H], nRHe, fmt=',', color='red')
+    pylab.ylabel('Mobility ($\\mathrm{T}^{-1}$)')
     if not outfile: outfile = 'Fits'
-    fig.savefig('../Graphs/Hall/'+outfile+'.png')
-    fig.savefig('../Graphs/Hall/'+outfile+'.pdf')
+    fig.savefig('../Graphs/Mobility/'+outfile+'.png')
+    fig.savefig('../Graphs/Mobility/'+outfile+'.pdf')
 
-def main(data_files, a, b, c, d, pguess, eguess, perr=1, eerr=1,
-         I=0.001, B=0.5003991, sample_thickness=1e-3,
+def interpolate(databox):
+    x, V, e, N = databox[:4]
+    V = [y for j, y in zip(x, V) if 200 <= j <= 400]
+    N = [y for j, y in zip(x, N) if 200 <= j <= 400]
+    x = [j for j in x if 200 <= j <= 400]
+    f1 = scipy.interpolate.interp1d(x, V, kind='cubic')
+    f2 = scipy.interpolate.interp1d(x, N, kind='cubic')
+    mini, maxi = int(min(x))+1, int(max(x))-1
+    V = [f1(i) for i in range(mini, maxi)]
+    N = [f2(i)/4 for i in range(mini, maxi)]
+    x = [i for i in range(mini, maxi)]
+    return x, V, N
+
+def main(data_files1, data_files2,
+         err, B=0.5003991, l=2e-2, w=1e-2,
          outfile=None):
-    R_H = lambda V_H: V_H*sample_thickness / (I*B) # Vm/AT
-    R_He = lambda V_H, V_He: pylab.sqrt(\
-                ( sample_thickness/(I*B) * V_He )**2 + \
-                ( V_H / (I*B) * 1e-4 )**2 + \
-                ( V_H * sample_thickness / (B**2 * I) * 2e-8 )**2 )
-    xs, ys, es, Ns = [], [], [], []
-    for df in data_files:
+    mu_H = lambda V_5, V_1: V_5 * l / ( V_1 * B * w)
+    mu_He = lambda V_5, V_1, V_5e, V_1e: pylab.sqrt(\
+                ( (l / ( V_1 * B * w)) * V_5e )**2 +\
+                ( (V_5 / ( V_1 * B * w)) * 1e-4 )**2 +\
+                ( (V_5 * l / ( V_1 * B * w)) * 1e-4 )**2 +\
+                ( (V_5 * l / ( V_1**2 * B * w)) * V_1e )**2 +\
+                ( (V_5 * l / ( V_1 * B**2 * w)) * 2e-8 )**2 +\
+                ( (V_5 * l / ( V_1 * B * w**2)) * 1e-4 )**2)
+    x5, x1, V5, V1, N5, N1 = [], [], [], [], [], []
+    for df in data_files1:
         databox = spinmob.data.load(df)
-        x, y, e, N = databox[:4]
-        xs += list(x)
-        ys += [R_H(i) for i in y]
-        es += [R_He(i, j) for i, j in zip(y, e)]
-        Ns += list(N)
-    xs, ys, es, Ns = pylab.array(xs), pylab.array(ys), pylab.array(es), pylab.array(Ns)
-    pes, ees = perr / pylab.sqrt(Ns), eerr / pylab.sqrt(Ns)
-    fits = splitfit(xs, ys, (pes, ees), a, b, c, d, pguess, eguess, outfile)
-    return fits
-
-if __name__ == '__main__':
-    data_file = sys.argv[1]
-    a, b, c, d = sorted([float(i) for i in sys.argv[2:6]])
-    fits = main(data_file, a, b, c, d)
-    for fit in fits:
-        print fit
-        print
+        x, V, N = interpolate(databox)
+        x5 += x
+        V5 += V
+        N5 += N
+    for df in data_files2:
+        databox = spinmob.data.load(df)
+        x, V, N = interpolate(databox)
+        x1 += x
+        V1 += V
+        N1 += N
+    min_len = min([len(x5), len(x1)])
+    xs = pylab.array(x5[:min_len])
+    V5, V1 = pylab.array(V5[:min_len]), pylab.array(V1[:min_len])
+    N5, N1 = pylab.array(N5[:min_len]), pylab.array(N1[:min_len])
+    e5, e1 = err / pylab.sqrt(N5), err / pylab.sqrt(N1)
+    ys, es = mu_H(V5, V1), mu_He(V5, V1, e5, e1)
+    make_fig(xs, ys, es, outfile)
