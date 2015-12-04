@@ -981,6 +981,58 @@ as a function of temperature
 \end_inset
 
 .
+ The values of 
+\begin_inset Formula $w$
+\end_inset
+
+ and 
+\begin_inset Formula $l$
+\end_inset
+
+ are given (
+\color magenta
+give the reference that is in Appendix E
+\color inherit
+ ).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/Mobility/180deg.51.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mobility as a function of Temperature in extrinsic regime
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We verify 
 \end_layout
 
 \begin_layout Subsection
