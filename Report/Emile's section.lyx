@@ -32,7 +32,7 @@
 \index_command default
 \float_placement h
 \paperfontsize 12
-\spacing other 1.5
+\spacing onehalf
 \use_hyperref false
 \papersize letterpaper
 \use_geometry true
@@ -48,7 +48,7 @@
 \use_package undertilde 1
 \cite_engine natbib
 \cite_engine_type numerical
-\biblio_style plainnat
+\biblio_style IEEEtran
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -59,10 +59,10 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2.5cm
-\topmargin 2.5cm
-\rightmargin 2.5cm
-\bottommargin 2.5cm
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -81,7 +81,7 @@
 \begin_body
 
 \begin_layout Title
-The Hall Effect and Properties of Semiconductors
+Emile section change
 \end_layout
 
 \begin_layout Quotation
@@ -747,14 +747,10 @@ At high temperature the conductance follows maxwell equation
 
 .
  Comparing the two equation we can see that 
-\begin_inset Formula $E_{g}=-b\times2kT=4.88(propagationerror)\times10^{-17}$
+\begin_inset Formula $E_{g}=-b\times2k=1.25(propagationerror)\times10^{-19}$
 \end_inset
 
-, (
-\color magenta
-what Temperature to use ? 390
-\color inherit
- ) where 
+, where 
 \begin_inset Formula $b=4.54(5)\times10^{3}$
 \end_inset
 
@@ -767,6 +763,94 @@ what Temperature to use ? 390
 
 \begin_layout Section
 Hall coefficient as a function of Temperature
+\end_layout
+
+\begin_layout Subsection
+Hall Voltage as a function of Temperature
+\end_layout
+
+\begin_layout Standard
+As introduced ealier the hall Voltage is the potential difference created
+ by the separation of carriers when a magnetic field is applied to the sample
+ and current is flowing through it.
+ We showed in the previous section that the resistance 
+\begin_inset Formula $R$
+\end_inset
+
+ of the sample varies with temperature 
+\begin_inset Formula $T$
+\end_inset
+
+ and the 
+\begin_inset Formula $R$
+\end_inset
+
+vs
+\begin_inset Formula $T$
+\end_inset
+
+ graph can be seperated in two region (
+\color magenta
+Ref in the appendix 
+\color inherit
+).
+ The conductance first decrease (resistance increases) with the temperature
+ as we progress in the extrinsic regime and then the conductance starts
+ to increase (resistance decreases) as electrons are able to reach the conductio
+n band.
+ We are then in the intrinsic regime.
+ (
+\color magenta
+Emile met explique la legende stp
+\color inherit
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/Simple plots/Hall_potential.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Hall Voltage as a function of temperature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Hall mobility
+\end_layout
+
+\begin_layout Subsection
+Hall coefficient
 \end_layout
 
 \begin_layout Section
@@ -1267,10 +1351,6 @@ re when V5 is applied and when V6 is applied with
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
