@@ -765,6 +765,94 @@ At high temperature the conductance follows maxwell equation
 Hall coefficient as a function of Temperature
 \end_layout
 
+\begin_layout Subsection
+Hall Voltage as a function of Temperature
+\end_layout
+
+\begin_layout Standard
+As introduced ealier the hall Voltage is the potential difference created
+ by the separation of carriers when a magnetic field is applied to the sample
+ and current is flowing through it.
+ We showed in the previous section that the resistance 
+\begin_inset Formula $R$
+\end_inset
+
+ of the sample varies with temperature 
+\begin_inset Formula $T$
+\end_inset
+
+ and the 
+\begin_inset Formula $R$
+\end_inset
+
+vs
+\begin_inset Formula $T$
+\end_inset
+
+ graph can be seperated in two region (
+\color magenta
+Ref in the appendix 
+\color inherit
+).
+ The conductance first decrease (resistance increases) with the temperature
+ as we progress in the extrinsic regime and then the conductance starts
+ to increase (resistance decreases) as electrons are able to reach the conductio
+n band.
+ We are then in the intrinsic regime.
+ (
+\color magenta
+Emile met explique la legende stp
+\color inherit
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs/Simple plots/Hall_potential.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Hall Voltage as a function of temperature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Hall mobility
+\end_layout
+
+\begin_layout Subsection
+Hall coefficient
+\end_layout
+
 \begin_layout Section
 Magneto-resistance against magnetic field intensity
 \end_layout

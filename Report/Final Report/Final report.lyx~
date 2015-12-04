@@ -747,14 +747,10 @@ At high temperature the conductance follows maxwell equation
 
 .
  Comparing the two equation we can see that 
-\begin_inset Formula $E_{g}=-b\times2kT=4.88(propagationerror)\times10^{-17}$
+\begin_inset Formula $E_{g}=-b\times2k=1.25(propagationerror)\times10^{-19}$
 \end_inset
 
-, (
-\color magenta
-what Temperature to use ? 390
-\color inherit
- ) where 
+, where 
 \begin_inset Formula $b=4.54(5)\times10^{3}$
 \end_inset
 

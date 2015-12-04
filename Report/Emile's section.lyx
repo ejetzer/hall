@@ -330,10 +330,18 @@ Before introducing next characteristic we are interested in the experiment,
 .
  This effect can also be quantified by the Hall coefficient defined to be
  
-\begin_inset Formula $R_{H}=\frac{E_{y}}{J_{x}B}=\frac{V_{H}d}{IB}=\frac{1}{ne}$
+\begin_inset Formula 
+\[
+R_{H}=\frac{E_{y}}{J_{x}B}=\frac{V_{H}d}{IB}=\frac{1}{ne},
+\]
+
 \end_inset
 
-, where
+, 
+\end_layout
+
+\begin_layout Standard
+where
 \begin_inset Formula $E_{y}$
 \end_inset
 
@@ -345,11 +353,22 @@ Before introducing next characteristic we are interested in the experiment,
 is the current density in the sample, B is the magnitude of the magnetic
  field and d is the thickness of the sample (for a rectangle model perpendicular
  to the field).
- Another way to quantify the effect is the Hall angle 
-\begin_inset Formula $\phi_{H}=\frac{V_{y}}{V_{x}}=\frac{E_{y}w}{E_{x}l}=\frac{w}{l}\mu_{H}B$
+ Another way to quantify the effect is the Hall angle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi_{H}=\frac{V_{y}}{V_{x}}=\frac{E_{y}w}{E_{x}l}=\frac{w}{l}\mu_{H}B,
+\]
+
 \end_inset
 
-, where 
+ 
+\end_layout
+
+\begin_layout Standard
+where 
 \begin_inset Formula $V_{x}$
 \end_inset
 
@@ -847,6 +866,10 @@ The Hall Voltage as a function of temperature
 
 \begin_layout Subsection
 Hall mobility
+\end_layout
+
+\begin_layout Standard
+The mobility is defined 
 \end_layout
 
 \begin_layout Subsection
