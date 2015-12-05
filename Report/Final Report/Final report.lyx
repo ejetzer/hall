@@ -1,5 +1,5 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -18,13 +18,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
-\font_math auto
 \font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -36,24 +36,15 @@
 \use_hyperref false
 \papersize letterpaper
 \use_geometry true
-\use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
-\use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
-\cite_engine natbib
-\cite_engine_type numerical
-\biblio_style plainnat
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_numerical
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -116,10 +107,37 @@ McGill University
 \end_layout
 
 \begin_layout Abstract
-I........
+We investigated the Hall effect dependance on temperature in a germanium
+ crystal.
+ We confirmed that the conductance in the sample follows a power law in
+ the intrinsic regime with 
+\begin_inset Formula $\chi_{2}^{2}=0.82$
+\end_inset
+
+, at low temperatures, and an exponential in the extrinsic regime, at high
+ temperatures.
+ From the exponential fit we found band gap energy of germanium to be 
+\begin_inset Formula $E_{g}=1.2(5)\times10^{-19}\,\mathrm{{J}}$
+\end_inset
+
+.
+ The Hall coefficient follows the same trends, and this shows that the negative
+ charge carrier density of germanium decreases as temperature increases
+ in the intrinsic regime, and increases with temperature in the extrinsic
+ regime.
+ We also verify that the magnetoresistance of germanium follows a quadratic
+ law with 
+\begin_inset Formula $\chi_{3}^{2}=0.902$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Abstract
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -193,37 +211,34 @@ In order to analyze this characteristics we need to understand the theory
 \begin_inset Formula $\textbf{J}=\sigma\textbf{E}$
 \end_inset
 
- (from electromagnetism 
-\color magenta
-can refer to Griffiths
-\color inherit
-).
- From Maxwell distribution theory (
-\color magenta
-refer to references
-\color inherit
-) the mean velocity 
+.
+ The mean velocity 
 \begin_inset Formula $\textbf{v}$
 \end_inset
 
-(
-\color magenta
-refer to maxwell distribution reference
-\color inherit
- ) and the mean free path 
+ and the mean free path 
 \begin_inset Formula $\lambda$
 \end_inset
 
- (
-\color magenta
-refer to mean free path reference
-\color inherit
-) can be defined and we observe that 
+ can be defined and we observe that 
 \begin_inset Formula $\lambda$
 \end_inset
 
  goes like 
 \begin_inset Formula $\nicefrac{1}{kT}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{halleffect:online}
+\end_layout
+
 \end_inset
 
 .
@@ -260,9 +275,9 @@ refer to mean free path reference
 
  with:
 \begin_inset Formula 
-\[
-R\propto T^{b}\rightarrow G\propto T^{-3/2}
-\]
+\begin{equation}
+R\propto T^{3/2}\rightarrow G\propto T^{-3/2}\label{eq:Rpoly}
+\end{equation}
 
 \end_inset
 
@@ -279,9 +294,9 @@ This is the extrinsic conduction.
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-R\propto e^{\nicefrac{a}{T}}\rightarrow G\propto e^{\nicefrac{Eg}{2kT}},
-\]
+\begin{equation}
+R\propto e^{\nicefrac{a}{T}}\rightarrow G\propto e^{\nicefrac{Eg}{2kT}},\label{eq:Rexp}
+\end{equation}
 
 \end_inset
 
@@ -301,12 +316,6 @@ where
 This is the intrinsic conduction.
  The conductance increases as electrons are able to reach the conduction
  band.
- In (
-\color magenta
-section 3
-\color inherit
-) we conduct an experiment that shows this result.
- 
 \end_layout
 
 \begin_layout Standard
@@ -333,9 +342,9 @@ Before introducing next characteristic we are interested in the experiment,
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-R_{H}=\frac{E_{y}}{J_{x}B}=\frac{V_{H}d}{IB}=\frac{1}{ne},
-\]
+\begin{equation}
+R_{H}=\frac{E_{y}}{J_{x}B}=\frac{V_{H}d}{IB}=\frac{1}{ne},\label{eq:coefficient}
+\end{equation}
 
 \end_inset
 
@@ -356,9 +365,9 @@ is the current density in the sample, B is the magnitude of the magnetic
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\phi_{H}=\frac{V_{y}}{V_{x}}=\frac{E_{y}w}{E_{x}l}=\frac{w}{l}\mu_{H}B,
-\]
+\begin{equation}
+\phi_{H}=\frac{V_{y}}{V_{x}}=\frac{E_{y}w}{E_{x}l}=\frac{w}{l}\mu_{H}B,\label{eq:mobility}
+\end{equation}
 
 \end_inset
 
@@ -416,9 +425,9 @@ direction according to the sign of the carriers.
  we can obtain an equation for the Hall coefficient in terms of the mobilities
  and the carriers densities: 
 \begin_inset Formula 
-\[
-R_{H}=\frac{\mu_{+}^{2}p-\mu_{-}^{2}n}{e(\mu_{+}p-\mu_{-}n)}
-\]
+\begin{equation}
+R_{H}=\frac{\mu_{+}^{2}p-\mu_{-}^{2}n}{e(\mu_{+}p-\mu_{-}n)}\label{eq:doping}
+\end{equation}
 
 \end_inset
 
@@ -441,7 +450,7 @@ increases and
 
  decreases with increasing temperature).
  Such semiconductors are said to be 
-\begin_inset Formula $p-type$
+\begin_inset Formula $\mbox{\ensuremath{p}-type}$
 \end_inset
 
 .
@@ -450,342 +459,14 @@ increases and
 \end_inset
 
  are said to be 
-\begin_inset Formula $n-type$
+\begin_inset Formula $n\mbox{-type}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Potential error
-\end_layout
-
-\begin_layout Section
-Function of conductance against temperature 
-\end_layout
-
-\begin_layout Standard
-An experiment can be done to show the evolution of the resistance 
-\begin_inset Formula $R$
-\end_inset
-
- of a sample crystal when the temperature of the sample varies as discussed
- in the introduction(
-\color magenta
-reference
-\color inherit
-).
- We use a sample of germanium (
-\color red
-Figure ....
-\color inherit
-) connected to a thermocouple that measures the temperature of the crystal.
- The sample is cooled down with liquid nitrogen to approximately 150K.
- The temperature increases to room temperature and then a DC power supply
- is used to power a heater connected to the sample to increase the temperature
- up to 383K.
- During the entire process a current source supply a constant current of
- 1mA to the crystal allowing us to measure different voltages (
-\color red
-Figure ......
-\color inherit
-).
- A digital multimeter (DMM) reads the different voltages of interest for
- the experiment and reads the temperature and current through the sample.
- These values are displayed on the apparatus and can be seen on a computer.
- 
-\end_layout
-
-\begin_layout Standard
-A graph of resistance against temperature was done when the voltage V5 (
-\color red
-Reference to graph of voltages
-\color inherit
- ) is applied to the sample and another one when the voltage V6 is applied
- 
-\color red
-(Refer to graph in the appendix
-\color inherit
-).
- At low temperature when the conduction is mainly due to extrinsic process
- the number of carriers is constant and we expect it to follow a power law
- 
-\begin_inset Formula $R\propto T^{b}$
-\end_inset
-
- (as discussed in the introduction).
- At high temperature, the carrier density varies with temperature and the
- electrical conductivity follow Maxwell distribution 
-\begin_inset Formula $R\propto e^{\nicefrac{a}{T}}$
-\end_inset
-
-.
- For both V5 and V6 we fitted the graph of resistance versus temperature
- in the low temperature region with a power law equation 
-\begin_inset Formula $a\times(x-x_{0})^{3/2}$
-\end_inset
-
- , where the parameters are 
-\begin_inset Formula $a$
-\end_inset
-
-and 
-\begin_inset Formula $x_{0}$
-\end_inset
-
- (the value of these parameters are not relevant for the rest of the experiment
- so we will just report the chi square).
- Also we fitted the graph in a high temperature region with a exponential
- decay equation 
-\begin_inset Formula $a\times e^{bx}$
-\end_inset
-
-, where the parameters are 
-\begin_inset Formula $a$
-\end_inset
-
- and 
-\begin_inset Formula $b$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The chi square for the power fit was found to be 
-\begin_inset Formula $\chi_{V_{5}}^{2}=0.82$
-\end_inset
-
- for 
-\begin_inset Formula $V_{5}$
-\end_inset
-
- and 
-\begin_inset Formula $\chi_{V_{6}}^{2}=0.85$
-\end_inset
-
- for 
-\begin_inset Formula $V_{6}$
-\end_inset
-
- (
-\color magenta
-Is there a better way of stating this
-\color inherit
-).
- The parameters for the exponential fit were found to be for 
-\begin_inset Formula $V_{5}$
-\end_inset
-
- : 
-\begin_inset Formula $a=2.5(3)\times10^{-4}$
-\end_inset
-
- , 
-\begin_inset Formula $b=4.54(5)\times10^{3}$
-\end_inset
-
- and the chi square is 
-\begin_inset Formula $\chi_{V_{5}}^{2}=1.07$
-\end_inset
-
- and 
-\begin_inset Formula $\chi_{V_{6}}^{2}=1.03$
-\end_inset
-
- for 
-\begin_inset Formula $V_{6}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The conductance now is just the inverse of the resistance 
-\begin_inset Formula $G=\frac{1}{R}\propto\frac{1}{\rho}$
-\end_inset
-
-.
- The graph of the conductance will just appear to be the inverse of the
- graph of the resistance versus temperature and the two fit equations are
- the inverse of the equations used to fit the low and high temperature region
- of the graphs of resistance versus temperature.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs for final report/GvsT.png
-	lyxscale 40
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fits at low and high temperature region for graphs of conductance versus
- temperature when 
-\begin_inset Formula $V_{5}$
-\end_inset
-
- is applied and when 
-\begin_inset Formula $V_{6}$
-\end_inset
-
- is applied with the parameters of the exponential fit 
-\begin_inset Formula $a=2.5(3)\times10^{-4}$
-\end_inset
-
- and 
-\begin_inset Formula $b=4.54(5)\times10^{3}$
-\end_inset
-
- for 
-\begin_inset Formula $V_{5}$
-\end_inset
-
- and 
-\begin_inset Formula $a=4.54(5)\times10^{3}$
-\end_inset
-
- and 
-\begin_inset Formula $b=4.48(5)\times10^{3}$
-\end_inset
-
- for 
-\begin_inset Formula $V_{6}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the low temperature region we used 
-\begin_inset Formula $\nicefrac{1}{a\times(x-x_{0})^{3/2}}$
-\end_inset
-
- where the parameters are the same as the ones for resistance versus temperature
- graph.
- Similarly in the high temperature region the fit equation is 
-\begin_inset Formula $\nicefrac{1}{a\times e^{bx}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The chi squares for the power law were 
-\begin_inset Formula $\chi_{V_{5}}^{2}=0.82$
-\end_inset
-
- and 
-\begin_inset Formula $\chi_{V_{6}}^{2}=0.85$
-\end_inset
-
- (
-\color magenta
-Is there a better way of stating this
-\color inherit
-).
- The parameters for the exponential fit for 
-\begin_inset Formula $V_{5}$
-\end_inset
-
- were found to be 
-\begin_inset Formula $a=2.5(3)\times10^{-4}$
-\end_inset
-
- , 
-\begin_inset Formula $b=4.54(5)\times10^{3}$
-\end_inset
-
- and the chi square is 
-\begin_inset Formula $\chi_{V_{5}}^{2}=1.07$
-\end_inset
-
- and 
-\begin_inset Formula $\chi_{V_{6}}^{2}=1.03$
-\end_inset
-
- for 
-\begin_inset Formula $V_{6}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-At high temperature the conductance follows maxwell equation 
-\begin_inset Formula $G\propto e^{\frac{E_{g}}{2kT}}$
-\end_inset
-
-, where 
-\begin_inset Formula $E_{g}$
-\end_inset
-
- is the band gap energy.
- In order to find a value for the band gap energy, we use the fit of the
- Conductance versus temperature graph in the high temperature region where
- the fit is exponential 
-\begin_inset Formula $\nicefrac{1}{a\times e^{bx}}\propto e^{-bx}$
-\end_inset
-
-.
- Comparing the two equation we can see that 
-\begin_inset Formula $E_{g}=-b\times2k=1.25(propagationerror)\times10^{-19}$
-\end_inset
-
-, where 
-\begin_inset Formula $b=4.54(5)\times10^{3}$
-\end_inset
-
- is the parameter found with the fit equation for 
-\begin_inset Formula $V_{5}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Hall coefficient as a function of Temperature
-\end_layout
-
-\begin_layout Section
-Magneto-resistance against magnetic field intensity
-\end_layout
-
-\begin_layout Standard
-In this section, we seek to determine how the resistance of the germanium
- sample is affected by the magnetic field.
- The resistance of the germanium sample is expected to change in the presence
+The resistance of the germanium sample is expected to change in the presence
  of a magnetic field because the magnetic force shifts electrical charges
  inside the sample.
  This affects the charge density, which is not uniform anymore, and this,
@@ -816,17 +497,26 @@ In this section, we seek to determine how the resistance of the germanium
 \begin_inset Formula $B$
 \end_inset
 
-:
-\color yellow
-(PUT A BIBLIOGRAPHICAL REFERENCE TO THE OXFORD DOCUMENT HERE)
-\color inherit
- 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{magneto:online}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\Delta\rho\varpropto B^{2}
+\Delta\rho\varpropto B^{2}.
 \end{equation}
 
 \end_inset
@@ -835,8 +525,7 @@ In this section, we seek to determine how the resistance of the germanium
 \end_layout
 
 \begin_layout Standard
-.
- Then, 
+Then, 
 \begin_inset Formula $K(R-R_{0})=CB^{2}$
 \end_inset
 
@@ -861,47 +550,561 @@ In this section, we seek to determine how the resistance of the germanium
 \begin_inset Formula $R$
 \end_inset
 
- is expected to follow a functional form 
-\begin_inset Formula $R=C\cdotp B^{2}+D$
+ is expected to follow the form
+\begin_inset Formula 
+\begin{equation}
+R=C\cdotp B^{2}+D.\label{eq:magneto}
+\end{equation}
+
 \end_inset
 
-, where 
-\begin_inset Formula $C$
-\end_inset
 
- and 
-\begin_inset Formula $D$
-\end_inset
+\end_layout
 
- are constants.
- 
+\begin_layout Section
+Function of conductance against temperature 
 \end_layout
 
 \begin_layout Standard
-We put the sample inside the magnet.
- There is a constant current of 1 mA passing through the sample.
- There is a second current, which we set with the current power supply,
- to power the electromagnet and create a magnetic field.
- Thus, the magnetic field remains constant.
- In other words, setting the current at some value is an indirect way to
- create a constant magnetic field.
- Then, we take 3 measurements: the potential of the Hall probe, and the
- two potentials
-\begin_inset Formula $V{}_{5}$
+We can show that the resistance 
+\begin_inset Formula $R$
 \end_inset
 
- and 
-\begin_inset Formula $V{}_{6}$
+ of a germanium crystal varies with temperature 
+\begin_inset Formula $T$
+\end_inset
+
+ as described in Eq.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Rpoly"
+
+\end_inset
+
+ at low temperatures and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Rexp"
+
+\end_inset
+
+ at high temperatures.
+ The setup used is shown in Fig.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:apparatus"
+
 \end_inset
 
 .
- They don't change over time, but we still take several successive measurements
- of each, because of random fluctuations, and compute the average and standard
- deviation to obtain definite values.
- We then set the current to a slightly higher value (the current inside
- the sample always remains at 1 mA) and take new measurements.
- We tested a range of values from 1.7 mA to 17 mA.
- To compute the resistance 
+ We use a germanium sample connected to a thermocouple that measures the
+ temperature of the crystal.
+ The sample is cooled down with liquid nitrogen to approximately 
+\begin_inset Formula $150\,\mathrm{{K}}$
+\end_inset
+
+.
+ The temperature increases to room temperature and then a DC power supply
+ is used to power a heater connected to the sample to increase the temperature
+ up to 
+\begin_inset Formula $400\,\mathrm{K}$
+\end_inset
+
+.
+ During the experiment a current source supplies a constant current of 
+\begin_inset Formula $1\mathrm{mA}$
+\end_inset
+
+ to the crystal.
+ A digital multimeter (DMM) reads the potentials from the sample holder,
+ as well as the sample's temperature.
+ These values are displayed on the DMM's screen and are recorded on a computer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/ejetzer/Documents/hall/Graphs for final report/Apparatus.pdf
+	lyxscale 30
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:apparatus"
+
+\end_inset
+
+Schematic of the apparatus for the experiment.
+ On the left, the dials of each of the relevant parts, in the center, the
+ connections between parts and position of the sample, and on the right
+ the circuit embedded on the sample holder.
+ The sample is connected to the voltmeter, which feeds the potential measurement
+s to the computer, and supplies the current to the sample.
+ The thermocouple labelled is embedded into the sample holder, and connected
+ to the voltmeter via a cold-junction compensator.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The sample's conductance was plotted against temperature.
+ At low temperature when the conduction is mainly due to extrinsic process
+ the number of carriers is constant and we expect it to follow a power law
+ 
+\begin_inset Formula $G\propto T^{-3/2}$
+\end_inset
+
+ (see Eq.
+
+\begin_inset Formula $\,$
+\end_inset
+
+
+\lang english
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Rpoly"
+
+\end_inset
+
+).
+ At high temperature, the carrier density varies with temperature and the
+ conductance follows 
+\begin_inset Formula $G\propto e^{\nicefrac{b}{T}}$
+\end_inset
+
+ (see Eq.
+
+\begin_inset Formula $\,$
+\end_inset
+
+
+\lang english
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Rexp"
+
+\end_inset
+
+).
+ We fitted the graph of conductance against temperature in the low temperature
+ region with a function of the form 
+\begin_inset Formula $a\times(x-x_{0})^{3/2}$
+\end_inset
+
+ , with parameters 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ We also fitted the graph in a high temperature region with a function of
+ the form 
+\begin_inset Formula $a\times e^{bx}$
+\end_inset
+
+, with parameters are 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\chi_{2}^{2}$
+\end_inset
+
+ for the power fit was found to be 
+\begin_inset Formula $\chi_{V_{5}}^{2}=0.82$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{V_{6}}^{2}=0.85$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+, indicating that 
+\begin_inset Formula $G$
+\end_inset
+
+ does follow a power law at low temperatures.
+ The parameters for the exponential fit were, for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ : 
+\begin_inset Formula $a=2.5(3)\times10^{-4}\,\Omega^{-1}$
+\end_inset
+
+ , 
+\begin_inset Formula $b=4.54(5)\times10^{3}\,\mathrm{{K}}$
+\end_inset
+
+ and the 
+\begin_inset Formula $\chi_{2}^{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $\chi_{V_{5}}^{2}=1.07$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{V_{6}}^{2}=1.03$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+, and are plotted in Fig.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:conductance"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/ejetzer/Documents/hall/Graphs for final report/GvsT.pdf
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:conductance"
+
+\end_inset
+
+Fits at low and high temperature region for graphs of conductance versus
+ temperature when 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ (blue) is applied and when 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+ (green) is applied with the parameters of the exponential fit 
+\begin_inset Formula $a=2.5(3)\times10^{-4}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.54(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a=4.54(5)\times10^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $b=4.48(5)\times10^{3}$
+\end_inset
+
+ for 
+\begin_inset Formula $V_{6}$
+\end_inset
+
+.
+ On the right is the way the apparatus is connected for this section of
+ the experiment.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At high temperature the conductance follows maxwell equation 
+\begin_inset Formula $G\propto e^{\frac{E_{g}}{2kT}}$
+\end_inset
+
+, where 
+\begin_inset Formula $E_{g}$
+\end_inset
+
+ is the band gap energy.
+ In order to find a value for the band gap energy, we use the fit of the
+ Conductance versus temperature graph in the high temperature region where
+ the fit is exponential.
+ Comparing the two equation we can see that 
+\begin_inset Formula $E_{g}=b\times2k=1.2(5)\times10^{-19}\,\mathrm{{J}}$
+\end_inset
+
+, where 
+\begin_inset Formula $b=4.54(5)\times10^{3}\,\mathrm{{K}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Hall coefficient as a function of Temperature
+\end_layout
+
+\begin_layout Standard
+The next step in the experiment is to determine the Hall coefficient of
+ the germanium sample as a function of temperature.
+ This is done by repeating the previous measurements, with the magnets powered
+ to supply uniform magnetic field of 
+\begin_inset Formula $500\,\mathrm{mT}$
+\end_inset
+
+, as shown on the right in Fig.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:hallmobility"
+
+\end_inset
+
+.
+ The Hall coefficient is computed from 
+\begin_inset Formula $V_{5}$
+\end_inset
+
+ using Eq.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coefficient"
+
+\end_inset
+
+, and the Hall mobility from the manufacturer given sample characteristics
+ (Insert reference here) using Eq.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mobility"
+
+\end_inset
+
+.
+ As shown on the plot, the Hall coefficient is decreasing in the extrinsic
+ regime, meaning the number of negative charge carriers is increasing with
+ temperature, as expected in Eq.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:doping"
+
+\end_inset
+
+.
+ In the intrinsic regime, the number of positive charge carriers is increasing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/ejetzer/Documents/hall/Graphs for final report/RHvsT.pdf
+	height 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:hallmobility"
+
+\end_inset
+
+Hall coefficient (blue) and mobility (green) against temperature, and the
+ way the apparatus is connected during this section of the experiment.
+ The magnets are on, and the Hall probe is used to measure the magnetic
+ field.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Magneto-resistance against magnetic field intensity
+\end_layout
+
+\begin_layout Standard
+In this section, we seek to determine how the resistance of the germanium
+ sample is affected by the magnetic field.
+ We put the sample inside the magnet.
+ There is a constant current of 1 mA passing through the sample.
+ We record the potential of the Hall probe 
+\begin_inset Formula $V_{probe}$
+\end_inset
+
+, and the potential 
+\begin_inset Formula $V{}_{5}$
+\end_inset
+
+ (see Fig.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:apparatus"
+
+\end_inset
+
+).
+ We varied the magnetic field from 50 to 
+\begin_inset Formula $500\,\mathrm{{mT}}$
+\end_inset
+
+.
+ The resistance 
 \begin_inset Formula $R$
 \end_inset
 
@@ -909,21 +1112,25 @@ We put the sample inside the magnet.
 \begin_inset Formula $V{}_{5}$
 \end_inset
 
- (mesured) by the constant current of 1 mA.
- To compute the magnetic field 
+ by the current of 1
+\begin_inset Formula $\,$
+\end_inset
+
+mA.
+ The magnetic field 
 \begin_inset Formula $B$
 \end_inset
 
-, we know that it depends on the potential 
+ depends on 
 \begin_inset Formula $V_{probe}$
 \end_inset
 
- of the Hall probe in the functional form 
+ according 
 \begin_inset Formula $B=\gamma+\delta\cdotp V_{probe}$
 \end_inset
 
 .
- For our probe, we are given the values 
+ Our probe was calibrated prior to the experiment, and has parameters 
 \begin_inset Formula $\gamma=9.62$
 \end_inset
 
@@ -931,29 +1138,8 @@ We put the sample inside the magnet.
 \begin_inset Formula $\delta=1.8949$
 \end_inset
 
- mT/mV.
- Thus, with 
-\begin_inset Formula $V_{5}$
-\end_inset
-
- and 
-\begin_inset Formula $V_{probe}$
-\end_inset
-
-, we can find the resistance 
-\begin_inset Formula $R$
-\end_inset
-
- and the magnetic field 
-\begin_inset Formula $B$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-The plot of the 
+ T/V.
+ The plot of the 
 \begin_inset Formula $R$
 \end_inset
 
@@ -978,11 +1164,30 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-graph of resistance vs magnetic field
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/ejetzer/Documents/hall/Graphs for final report/Magnetoresistance.pdf
+	height 6cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -991,17 +1196,41 @@ name "fig:magneto-resistance"
 
 \end_inset
 
-The resistance (in k
+The resistance 
+\begin_inset Formula $R$
+\end_inset
+
+ (
 \begin_inset Formula $\Omega$
 \end_inset
 
-) against the magnetic field (in mT) of the germanium sample.
+) against the magnetic field 
+\begin_inset Formula $B$
+\end_inset
+
+ (
+\begin_inset Formula $10{}^{-1}$
+\end_inset
+
+T) of the germanium sample.
  
 \begin_inset Formula $R$
 \end_inset
 
- steadily increases along with 
+ increases quadratically with 
 \begin_inset Formula $B$
+\end_inset
+
+.
+ The results of the fit are shown in Tab.
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:magneto-resistance"
+
 \end_inset
 
 .
@@ -1028,7 +1257,7 @@ We used a fit of the form
 
  is a constant.
  The parameter values and 
-\begin_inset Formula $\chi^{2}$
+\begin_inset Formula $\chi_{3}^{2}$
 \end_inset
 
  are written in Table 
@@ -1039,6 +1268,16 @@ reference "tab:magneto-resistance"
 \end_inset
 
 .
+ The 
+\begin_inset Formula $\chi_{3}^{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $0.902$
+\end_inset
+
+, thus we conclude that the resistance of germanium does indeed depend on
+ the magnetic field quadratically.
 \end_layout
 
 \begin_layout Standard
@@ -1048,11 +1287,24 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="2">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1081,11 +1333,11 @@ Value
 \begin_inset Formula $a$
 \end_inset
 
- (k
+ (
 \begin_inset Formula $\Omega$
 \end_inset
 
-/mT)
+/T)
 \end_layout
 
 \end_inset
@@ -1094,15 +1346,7 @@ Value
 \begin_inset Text
 
 \begin_layout Plain Layout
-(8.64
-\begin_inset Formula $\pm$
-\end_inset
-
-17.07)
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
+9.2(9)
 \end_layout
 
 \end_inset
@@ -1116,7 +1360,7 @@ Value
 \begin_inset Formula $B_{0}$
 \end_inset
 
- (mT)
+ (T)
 \end_layout
 
 \end_inset
@@ -1125,11 +1369,7 @@ Value
 \begin_inset Text
 
 \begin_layout Plain Layout
--314
-\begin_inset Formula $\pm$
-\end_inset
-
-1194
+-0.28(5)
 \end_layout
 
 \end_inset
@@ -1143,7 +1383,7 @@ Value
 \begin_inset Formula $b$
 \end_inset
 
- (k
+ (
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -1156,11 +1396,7 @@ Value
 \begin_inset Text
 
 \begin_layout Plain Layout
-65.25
-\begin_inset Formula $\pm$
-\end_inset
-
-5.95
+65.4(3)
 \end_layout
 
 \end_inset
@@ -1183,7 +1419,7 @@ Value
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0022
+0.902
 \end_layout
 
 \end_inset
@@ -1197,7 +1433,7 @@ Value
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -1207,6 +1443,11 @@ name "tab:magneto-resistance"
 \end_inset
 
 The parameter values of the fit for the magneto-resistance.
+ The fit has the functional form 
+\begin_inset Formula $R=a(B-B_{0})^{2}+b$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -1220,137 +1461,22 @@ The parameter values of the fit for the magneto-resistance.
 \end_layout
 
 \begin_layout Section
-Appendices 
-\end_layout
-
-\begin_layout Subsection
-Graphs 
+Potential error
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/PHYS439/hall/Graphs for final report/RvsT.png
-	lyxscale 40
-	scale 50
-
+To determine the error on the measurements of potential, we take series
+ of measurements at 140, 300 and 400
+\begin_inset Formula $\,$
 \end_inset
 
-
+K and took the standard deviation to obtain the uncertainty at low, room
+ and high temperatures.
+ The errors are propagated by adding the product of the partial derivatives
+ and uncertainties of parameters in quadrature.
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Fit at low and high temperature region for graphs of resistance versus temperatu
-re when V5 is applied and when V6 is applied with 
-\begin_inset Formula $a=2.5(3)\times10^{-4}$
-\end_inset
-
- and 
-\begin_inset Formula $b=4.54(5)\times10^{3}$
-\end_inset
-
- for 
-\begin_inset Formula $V_{5}$
-\end_inset
-
- and 
-\begin_inset Formula $a=4.2(5)\times10^{-4}$
-\end_inset
-
- and 
-\begin_inset Formula $b=4.48(5)\times10^{3}$
-\end_inset
-
- for 
-\begin_inset Formula $V_{6}$
-\end_inset
-
-.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/Nicolas/Desktop/image.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Diagram of the useful voltages to find in the experiment
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-References
-\end_layout
-
-\begin_layout Standard
-Wikipedia, Maxwell distribution, https://en.wikipedia.org/wiki/Maxwell%E2%80%93Bol
-tzmann_distribution
-\end_layout
-
-\begin_layout Standard
-Wikipedia, Mean free pass, https://en.wikipedia.org/wiki/Mean_free_path#cite_note-
-9
-\end_layout
-
-\begin_layout Standard
-
-\end_layout
-
-\begin_layout Subsection
-Wiki
+\begin_layout Paragraph
 \begin_inset Newpage pagebreak
 \end_inset
 
