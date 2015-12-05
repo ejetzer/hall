@@ -1,0 +1,6 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
+\contentsline {section}{\numberline {2}Function of conductance against temperature }{6}{section.2}
+\contentsline {section}{\numberline {3}Hall coefficient as a function of Temperature}{8}{section.3}
+\contentsline {section}{\numberline {4}Magneto-resistance against magnetic field intensity}{8}{section.4}
+\contentsline {section}{\numberline {5}Potential error}{10}{section.5}

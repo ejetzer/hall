@@ -1,10 +1,11 @@
 %% LyX 2.0.8.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[12pt,english]{article}
+\usepackage{Style-Thesis-Report}
 \renewcommand{\familydefault}{\rmdefault}
-\usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
-\usepackage[letterpaper]{geometry}
+%\usepackage[T1]{fontenc}
+%\usepackage[latin9]{inputenc}
+%\usepackage[letterpaper]{geometry}
 \geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
 \usepackage{units}
 \usepackage{amstext}
@@ -163,8 +164,8 @@ R_{H}=\frac{\mu_{+}^{2}p-\mu_{-}^{2}n}{e(\mu_{+}p-\mu_{-}n)}\label{eq:doping}
 \end{equation}
 These mobilities very with temperature. When $p>n$ we expect $R_{H}$
 to change sign at some temperature (as $p$increases and $n$ decreases
-with increasing temperature). Such semiconductors are said to be $\mbox{\ensuremath{p}-type}$.
-Semiconductors which has $n>p$ are said to be $n\mbox{-type}$.
+with increasing temperature). Such semiconductors are said to be $p$-type.
+Semiconductors which has $n>p$ are said to be $n$-type.
 
 The resistance of the germanium sample is expected to change in the
 presence of a magnetic field because the magnetic force shifts electrical
@@ -180,7 +181,7 @@ dependence on $B$\cite{magneto:online}
 \end{equation}
 
 
-Then, $K(R-R_{0})=CB^{2}$, $R-R_{0\text{}}=CB^{2}$ ($K$ is absorbed
+Then, $K(R-R_{0})=CB^{2}$, $R-R_{0}=CB^{2}$ ($K$ is absorbed
 in $C$), and $R=CB^{2}+R_{0}$. Thus, the resistance $R$ is expected
 to follow the form
 \begin{equation}
@@ -196,7 +197,7 @@ with temperature $T$ as described in Eq.$\,$\ref{eq:Rpoly} at low
 temperatures and \ref{eq:Rexp} at high temperatures. The setup used
 is shown in Fig.$\,$\ref{fig:apparatus}. We use a germanium sample
 connected to a thermocouple that measures the temperature of the crystal.
-The sample is cooled down with liquid nitrogen to approximately $150\,\mathrm{{K}}$.
+The sample is cooled down with liquid nitrogen to approximately $150\,\mathrm{K}$.
 The temperature increases to room temperature and then a DC power
 supply is used to power a heater connected to the sample to increase
 the temperature up to $400\,\mathrm{K}$. During the experiment a
@@ -222,9 +223,9 @@ via a cold-junction compensator.}
 The sample's conductance was plotted against temperature. At low temperature
 when the conduction is mainly due to extrinsic process the number
 of carriers is constant and we expect it to follow a power law $G\propto T^{-3/2}$
-(see Eq.\inputencoding{latin1}{$\,$}\inputencoding{latin9}\ref{eq:Rpoly}).
+(see Eq.\,\ref{eq:Rpoly}).
 At high temperature, the carrier density varies with temperature and
-the conductance follows $G\propto e^{\nicefrac{b}{T}}$ (see Eq.\inputencoding{latin1}{$\,$}\inputencoding{latin9}\ref{eq:Rexp}).
+the conductance follows $G\propto e^{\nicefrac{b}{T}}$ (see Eq.\,\ref{eq:Rexp}).
 We fitted the graph of conductance against temperature in the low
 temperature region with a function of the form $a\times(x-x_{0})^{3/2}$
 , with parameters $a$ and $x_{0}$. We also fitted the graph in a
@@ -240,9 +241,7 @@ $\chi_{V_{5}}^{2}=1.07$ and $\chi_{V_{6}}^{2}=1.03$ for $V_{6}$,
 and are plotted in Fig.$\,$\ref{fig:conductance}.
 
 \begin{figure}[h]
-\begin{centering}
 \centering\includegraphics[height=6cm]{\string"/home/ejetzer/Documents/hall/Graphs for final report/GvsT\string".pdf}
-\par\end{centering}
 
 \caption{\label{fig:conductance}Fits at low and high temperature region for
 graphs of conductance versus temperature when $V_{5}$ (blue) is applied
@@ -268,13 +267,13 @@ The next step in the experiment is to determine the Hall coefficient
 of the germanium sample as a function of temperature. This is done
 by repeating the previous measurements, with the magnets powered to
 supply uniform magnetic field of $500\,\mathrm{mT}$, as shown on
-the right in Fig.$\,$\ref{fig:hallmobility}. The Hall coefficient
-is computed from $V_{5}$ using Eq.$\,$\ref{eq:coefficient}, and
+the right in Fig.\,\ref{fig:hallmobility}. The Hall coefficient
+is computed from $V_{5}$ using Eq.\,\ref{eq:coefficient}, and
 the Hall mobility from the manufacturer given sample characteristics
-(Insert reference here) using Eq.$\,$\ref{eq:mobility}. As shown
+(Insert reference here) using Eq.\,\ref{eq:mobility}. As shown
 on the plot, the Hall coefficient is decreasing in the extrinsic regime,
 meaning the number of negative charge carriers is increasing with
-temperature, as expected in Eq.$\,$\ref{eq:doping}. In the intrinsic
+temperature, as expected in Eq.\,\ref{eq:doping}. In the intrinsic
 regime, the number of positive charge carriers is increasing.
 
 \begin{figure}[h]
@@ -321,7 +320,7 @@ thus we conclude that the resistance of germanium does indeed depend
 on the magnetic field quadratically.
 
 \begin{table}[h]
-\centering%
+\centering
 \begin{tabular}{|c|c|}
 \hline 
 Parameter & Value\tabularnewline
@@ -346,13 +345,10 @@ the magneto-resistance. The fit has the functional form $R=a(B-B_{0})^{2}+b$.}
 \section{Potential error}
 
 To determine the error on the measurements of potential, we take series
-of measurements at 140, 300 and 400$\,$K and took the standard deviation
+of measurements at 140, 300 and 400\,K and took the standard deviation
 to obtain the uncertainty at low, room and high temperatures. The
 errors are propagated by adding the product of the partial derivatives
 and uncertainties of parameters in quadrature.
-
-
-\paragraph{\pagebreak{}}
 
 \bibliographystyle{IEEEtran}
 \bibliography{MyBibliography}
